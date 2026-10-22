@@ -1,0 +1,1630 @@
+=== PAGE 1 ===
+TEXMART – SMART TEXTILE MANAGEMENT SYSTEM  
+A MINI PROJECT REPORT 
+22ISP61 – MINI PROJECT 
+Submitted by 
+PRANITHA S G 
+(Register No. 23ISR044) 
+ 
+SHALINI S R 
+(Register No. 23ISR053) 
+ 
+VARSHASRI K 
+(Register No. 23ISR060) 
+ 
+in partial fulfilment of the 
+requirements for the award of 
+the degree of 
+  MASTER OF SCIENCE 
+                 IN       
+SOFTWARE SYSTEMS 
+   DEPARTMENT OF COMPUTER TECHNOLOGY – PG 
+ 
+            (Autonomous) 
+     PERUNDURAI  ERODE – 638060 
+   APRIL 2026 
+
+=== PAGE 2 ===
+ii 
+ 
+    DEPARTMENT OF COMPUTER TECHNOLOGY – PG 
+KONGU ENGINEERING COLLEGE 
+(Autonomous)  
+     PERUNDURAI  ERODE – 638060 
+                                                                        APRIL 2026  
+ 
+BONAFIDE CERTIFICATE 
+ 
+ 
+This is to certify that the mini project report entitled “ TEXMART - SMART TEXTILE 
+MANAGEMENT SYSTEM” is the bona fide record of project work done by PRANITHA 
+SENTHILMURUGAN GEETHA (Register No. 23ISR044), SHALINI S R (Register No. 
+23ISR053), VARSHASRI K  (Register No. 23ISR0 60) in partial fulfilment of the 
+requirements for the award of the Degree of Master of Science in Software Systems of Anna 
+university, Chennai during the year 2025 – 2026. 
+ 
+SUPERVISOR              HEAD OF THE DEPARTMENT 
+(Signature with seal) 
+DATE:                                                                                          
+ 
+Submitted for the end semester viva voce examination held on____________ 
+ 
+INTERNAL EXAMINER              EXTERNAL EXAMINAR 
+ 
+ 
+=== PAGE 3 ===
+iii 
+ 
+DECLARATION 
+ 
+I affir m that the  mini project report titled “ TEXMART – SMART TEXTILE 
+MANAGEMENT SYSTEM” being submitted in partial fulfilment of the requirements for the 
+award of Master of Science is the original work carried out by me. It has not formed the part 
+of any other project report or dissertation on the basis of which a degree or award was conferred 
+on an earlier occasion on this or any other candidate. 
+                         
+PRANITHA S G 
+                                                                                                    (Reg. No. 23ISR044) 
+ 
+               SHALINI S R 
+                                                                                                    (Reg. No. 23ISR053) 
+ 
+                                                                                               VARSHASRI K 
+                                                                                                     (Reg. No. 23ISR060) 
+ 
+DATE:  
+ 
+I certify that the declaration made by the above candidate is true to the best of my knowledge. 
+ 
+ 
+DATE:                                                                       Name & Signature of the Supervisor 
+         (Ms.T.Maragatham) 
+ 
+=== PAGE 4 ===
+iv 
+ 
+ 
+ABSTRACT 
+ 
+The TexMart – Smart Textile Management System is designed to streamline and modernize 
+the management of textile businesses by addressing the limitations of traditional manual and 
+semi-digital processes. Textile businesses often face challenges in maintaini ng inventory 
+records, tracking sales, managing suppliers, and analyzing business performance efficiently. 
+These issues can lead to errors, delays, and reduced productivity, ultimately affecting overall 
+business growth and customer satisfaction.  The proposed system provides a comprehensive 
+and user-friendly digital platform that enables efficient management of textile operations. It 
+offers features such as real-time inventory tracking, automated billing, supplier management, 
+and detailed sales analytics. The  system allows users to easily update stock, monitor product 
+availability, and generate reports for better decision -making. Additionally, it enhances 
+operational efficiency by reducing manual workload and minimizing errors through 
+automation. TexMart is de veloped using modern web technologies, including HTML, CSS, 
+JavaScript, and React for the front end, along with Node.js and Express.js for the back end. 
+MongoDB is used for efficient data storage and retrieval. The system ensures data security, 
+scalability, and high performance, making it suitable for both small -scale and large -scale 
+textile businesses. Overall, TexMart provides an effective solution to improve productivity, 
+accuracy, and business insights in the textile industry. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 5 ===
+v 
+ 
+ACKNOWLEDGEMENT 
+ 
+We express our sincere thanks to Thiru. E.R. K. Krishnan, M.Com.,  our beloved 
+Correspondent and all philanthropic trust members of Kongu Vellalar Institute of Technology 
+Trust who has always encouraged us in the academic and co-curricular activities. 
+ 
+We proudly thankful with no words of formal nature to our dynamic Principal Dr. 
+R.Parameshwaran M.E., Ph.D.,  for providing all the facilities indispensable during my 
+project. 
+ 
+We are thankful to Dr.R.C.Suganthe, M.E., Ph.D.,  Senior Professor and Head, 
+Department of Computer Technology-PG, for being a continuous source of inspiration for the 
+successful completion of the project. 
+ 
+We thank our project coordinator  and guide  Dr.T.Maragatham, M.E., Ph.D.,  
+Associate Professor, Department of Computer Technology -PG, for her valuable suggestions 
+during our project work. 
+ 
+ We thank C. Prabhu, the CEO of SREE POONGUZHALI COTTON MILLS for 
+providing us with this project opportunity and for his valuable guidance and support throughout 
+our project work. His suggestions and encouragement greatly contributed to the successful 
+completion of our project. 
+ 
+At the outset, we extent our gratitude to our family members without whom we may 
+not achieve up to this level in our career. 
+ 
+ 
+=== PAGE 6 ===
+vi 
+ 
+ 
+TABLE OF CONTENTS 
+ 
+CHAPTER                TITLE          PAGE NO.  
+NO. 
+                        ABSTRACT       iv 
+               LIST OF TABLES      viii 
+                LIST OF FIGURES      ix 
+                 ORGANIZATION PROFILE    x 
+1                INTRODUCTION      1 
+1.1 OVERVIEW OF THE PROJECT   1 
+  2                SYSTEM ANALYSIS     2 
+2.1  EXISTING SYSTEM     2 
+  2.2  PROPOSED SYSTEM     2 
+  2.3 FEASIBILITY STUDY     3 
+  2.4  PROBLEM ANALYSIS     4 
+                          2.5 DATA FLOW DIAGRAM    4 
+  2.6  SYSTEM SPECIFICATION    9 
+2.7 SOFTWARE DESCRIPTION    9 
+ 
+  3                SYSTEM DESIGN      13 
+  3.1 INPUT DESIGN      13 
+  3.2 DATABASE DESIGN     14 
+  3.3 MODULE DESCRIPTION    18 
+  3.4 OUTPUT DESIGN     19 
+=== PAGE 7 ===
+vii 
+ 
+  4               SYSTEM TESTING AND IMPLEMENTATION 21 
+  5               CONCLUSION AND FUTURE ENHANCEMENTS 25 
+  APPENDICES      26 
+                APPENDIX 1: SAMPLE CODE    26 
+                 APPENDIX 2: SAMPLE SCREENSHOTS   46 
+REFERENCES      50 
+MAPPING OF PROJECT TO SDG   51 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 8 ===
+viii 
+ 
+ 
+LIST OF TABLES 
+ 
+TABLE NO.    TITLE                PAGE NO. 
+3.1                ADMIN                   15 
+3.2                 CUSTOMER DETAILS                15 
+3.3                 PRODUCT DETAILS     15 
+3.4                 CATEGORY DETAILS     16 
+3.5                 PRODUCT PURCHASE DETAILS    16 
+3.6                 PAYMENT DETAILS     17 
+3.7                 CUSTOMER AND FEEDBACK    17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 9 ===
+ix 
+ 
+ 
+LIST OF FIGURES 
+ 
+FIGURE   TITLE                  PAGE NO. 
+ NO.        
+  2.1              CONTEXT DIAGRAM FOR TEXMART SMART  
+                     TEXTILE MANAGEMENT SYSTEM     5 
+  2.2               LEVEL 1 DFD FOR TEXMART SMART  
+                     TEXTILE MANAGEMENT SYSTEM     5 
+  2.3               LEVEL 2 DFD FOR ADMIN AND USER      
+                      MANAGEMENT        6 
+  2.4               LEVEL 2 DFD FOR SUPPLIER AND PURCHASE   7 
+  2.5               LEVEL 2 DFD FOR STOCK MANAGEMENT    8 
+  2.6               LEVEL 2 DFD FOR PRODUCT DISPLAY     8 
+A.2.1             HOME PAGE         46 
+A.2.2             SHOP CHECKLIST        46 
+A.2.3             JOURNAL PAGE        47 
+A.2.4             ECO VIEW         47 
+A.2.5             ACCOUNTS PAGE        48 
+A.2.6             PRODUCT AVAILABLE VIEW      48 
+A.2.7             BILLING PAGE        49 
+ 
+ 
+ 
+=== PAGE 10 ===
+x 
+ 
+ORGANIZATION PROFILE 
+ 
+     Founded with the vision of transforming traditional textile business operations through 
+digital innovation, TexMart – Smart Textile Management System represents a modern 
+approach to managing textile enterprises efficiently and intelligently. The system is designed 
+to bridge the gap between conventional management practices and the growing demand for 
+technology-driven solutions in the textile industry.  
+     TexMart has established itself as a reliable platform by providing a comprehensive solution 
+for handling key business activities such as inventory management, sales tracking, billing, and 
+supplier coordination. A distinctive aspect of TexMart is its focus on automation and real-time 
+data management. The system empowers users with features such as automated stock updates, 
+detailed reporting, and insightful analytics that support informed decision -making. By 
+simplifying complex processes and reducing man ual effort, TexMart enhances productivity 
+and operational efficiency.  
+     In addition to its core functionalities, TexMart emphasizes user -friendly design and 
+accessibility, ensuring that business owners and staff can easily adapt to the system without 
+extensive technical expertise. Built on modern web technologies, it offers scalability, security, 
+and high performance to support businesses of varying sizes.  With a strong foundation in 
+innovation, reliability, and efficiency, TexMart continues to serve as a smart solution for textile 
+management. It stands as a testament to h ow digital transformation can redefine traditional 
+business practices, enabling growth, accuracy, and improved customer satisfaction in the textile 
+sector. 
+=== PAGE 11 ===
+xi 
+ 
+ 
+
+=== PAGE 12 ===
+1 
+ 
+    CHAPTER 1 
+ 
+INTRODUCTION 
+ 
+1.1 OVERVIEW OF THE PROJECT 
+The “TEXMART – SMART TEXTILE MANAGEMENT SYSTEM”  is a user -
+friendly web-based platform designed to streamline and digitize textile business operations. 
+It integrates inventory management, sales tracking, billing, and supplier coordination into a 
+single system, enabling businesses to efficiently manage t heir day -to-day activities with 
+improved accuracy and reduced manual effort. 
+A key feature of the system is its Real -Time Inventory Management, which allows users 
+to monitor stock levels, update product details, and track availability instantly. This is 
+complemented by an Automated Billing System, which simplifies transactions, gen erates 
+invoices, and ensures accurate financial records. Additionally, the system provides Sales 
+Analytics and Reporting, offering valuable insights into product performance, revenue trends, 
+and customer purchasing patterns. 
+The platform also includes a Supplier Management Module, enabling businesses to 
+maintain supplier details, track orders, and manage procurement efficiently. On the 
+administrative side, the Admin Panel provides complete control over products, inventory, 
+sales records, suppliers, and user data. It also supports the generation and download of detailed 
+reports, helping administrators analyse business performance and make informed decisions. 
+Overall, TexMart creates a smart and efficient digital environment where textile business 
+operations are simplified through technology, enhancing productivity, accuracy, and overall 
+business growth. 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 13 ===
+2 
+ 
+ 
+CHAPTER 2 
+ 
+SYSTEM ANALYSIS 
+ 
+2.1 EXISTING SYSTEM 
+Traditional textile businesses often depend on manual methods or basic digital tools to 
+manage inventory, sales, and supplier details. These systems provide only simple record -
+keeping without real-time updates or advanced features. As a result, managing daily operations 
+becomes time-consuming and less efficient. Inventory tracking is often inaccurate, leading to 
+problems like excess stock or shortages. Billing and sales processes are handled manually, 
+increasing the risk of calculation errors. There is also no proper system to analyse sales data or 
+business performance. Information is usually scattered, making it difficult to access and 
+manage. These limitations reduce productivity and slow down decision -making. Businesses 
+struggle to adapt to modern demands  due to lack of automation. Overall, such systems are 
+outdated and not suitable for efficient textile management. 
+Drawbacks of Existing System 
+• Lack of Automation 
+• Inefficient Inventory Management 
+• Manual Billing Errors  
+• Limited Data Analysis 
+2.2 PROPOSED SYSTEM 
+The TexMart – Smart Textile Management System offers real -time inventory 
+management that allows users to track and update stock levels easily. Its automated billing 
+system enhances efficiency by generating accurate invoices and reducing manual errors. The 
+platform simplifies business operations by integrating inventory, sales, and supplier 
+management into a single system. Additionally, it provides detailed reports and analytics, 
+helping business owners make better decisions. The user -friendly interface ensu res easy 
+navigation and improves overall productivity 
+=== PAGE 14 ===
+3 
+ 
+Advantages of Proposed System 
+• Improves inventory management 
+• Enhances data accuracy 
+• Reduces manual workload 
+• Increases efficiency with automation and real-time tracking 
+2.3  FEASIBILITY STUDY 
+The feasibility study involves a detailed analysis carried out during the development of 
+the TexMart – Smart Textile Management System. Each component of the system is carefully 
+evaluated to ensure it meets the needs of textile business owners in an effici ent and user -
+friendly manner. It is important to identify the type of data required, as the system focuses on 
+managing inventory, sales, and supplier information effectively. System analysis involves 
+collecting, organizing, and evaluating data related to b usiness operations and workflow. This 
+ensures that the proposed system is practical, reliable, and capable of improving overall 
+performance. 
+Economical Feasibility 
+    The economic feasibility of implementing the TexMart – Smart Textile Management System 
+involves evaluating the initial investment in system development, software, and basic hardware 
+requirements, along with ongoing costs for maintenance and support. While the initial cost may 
+include setting up features such as inventory management, automated billing, and reporting 
+tools, the long -term financial benefits outweigh these expenses. By digitizing business 
+operations, the system reduces manual work, paperwork, a nd the chances of costly errors.  
+Additionally, improved inventory control and faster billing processes help in reducing losses 
+and increasing operational efficiency. The system also provides insights into sales and stock 
+trends, enabling better decision-making and resource utilization. Overall, TexMart contributes 
+to cost savings, improved productivity, and increased profitability for textile businesses. 
+Operational Feasibility 
+Operational feasibility is a key factor in the successful implementation of the TexMart 
+– Smart Textile Management System. Designed with simplicity and ease of use in mind, the 
+system ensures a smooth experience for textile business owners and staff. It si mplifies tasks 
+such as inventory management, billing, and supplier tracking, reducing dependence on manual 
+=== PAGE 15 ===
+4 
+ 
+processes. The automated features help minimize workload and improve efficiency in daily 
+operations. 
+Integration with existing workflows allows businesses to adopt the system without 
+major disruptions. The system can handle large volumes of product data and transactions, 
+making it suitable for growing textile businesses. Additionally, it is scalable and f lexible, 
+allowing easy updates and future enhancements. Proper training and support enable users to 
+operate the system effectively, improving overall productivity and business performance. 
+Technical Feasibility 
+The technical feasibility of the TexMart – Smart Textile Management System is based 
+on its compatibility with modern web technologies and its ability to support future 
+enhancements. The system is developed using reliable frameworks that ensure high 
+performance, smooth operation, and secure data handling. It supports responsive design, 
+making it accessible across devices such as desktops, tablets, and mobile phones for convenient 
+usage. The system uses a robust database to efficiently manage inventory, sales  records, and 
+supplier information. Its architecture supports real -time data processing, ensuring quick 
+updates and accurate information. Integration of features like automated billing and reporting 
+requires a stable and scalable technical infrastructure. Regular updates, security measures, and 
+technical support ensure the system remains reliable and up -to-date, making it a sustainable 
+solution for textile business management.  
+2.4 PROBLEM ANALYSIS 
+In the traditional approach to managing textile business operations, several challenges 
+arise due to manual and fragmented processes. These include the risk of inaccurate or outdated 
+inventory records, which can lead to confusion in stock management and or der handling. 
+Additionally, the absence of an integrated digital system often results in delays and errors in 
+billing, sales tracking, and supplier coordination, negatively impacting overall efficiency. 
+Without a centralized platform, business owners have limited visibility into stock levels and 
+sales performance, making decision -making difficult. This lack of automation and real -time 
+access to information reduces productivity and can hinder business growth in a competitive 
+textile market. 
+ 
+ 
+=== PAGE 16 ===
+5 
+ 
+2.5 DATA FLOW DIAGRAM 
+The Data Flow Diagram (DFD) of the TexMart – Smart Textile Management System 
+illustrates the flow of data between users, administrators, and system processes. It highlights 
+key functions such as inventory management, billing, sales tracking, and supplier management, 
+showing how data moves within the system and interacts with different components.  
+Context Diagram 
+The context diagram for the TexMart – Smart Textile Management System represents 
+a centralized system that interacts with users, suppliers, and administrators. Users can manage 
+inventory, generate bills, and track sales efficiently through the system. Suppliers contribute 
+by providing product details and managing supply information. Administrators oversee product 
+data, inventory levels, sales records, and supplier details. This overview reflects the system’s 
+digital approach, focusing on streamlined operations, real-time data management, and reducing 
+dependency on manual processes.  
+ 
+ Figure 2.1 Level 0 DFD -Texmark Smart Textile Management System 
+
+=== PAGE 17 ===
+6 
+ 
+ 
+                          Figure 2.2 Level 1 DFD -Texmark Smart Textile Management System 
+ 
+ 
+       Figure 2.3 Level 2 DFD -Admin &User Management 
+
+=== PAGE 18 ===
+7 
+ 
+ 
+ 
+     Figure 2.4 Level 2 DFD(Supplier and Purchase Module) 
+ 
+
+=== PAGE 19 ===
+8 
+ 
+ 
+      Figure 2.5 Level 2 DFD(Stock Management Module) 
+ 
+ 
+ 
+ 
+        Figure 2.6 Level 2 DFD(Product Display Module) 
+ 
+
+=== PAGE 20 ===
+9 
+ 
+ 
+2.6 SYSTEM SPECIFICATION 
+ 
+Hardware Requirements 
+ 
+     This section gives the details and specification of the hardware on which the system is 
+expected to work. 
+Processor          :   Intel Core i3 / above 
+Hard Disk         :   500 GB 
+RAM                :    4 GB DDR4 or above 
+Monitor            :   15” Color Monitor 
+System Type    :   64-bit Operating System 
+ 
+Software Requirements 
+ 
+     This section gives the details and specification of the software on which the system is 
+expected to work. 
+Front-End                    :   HTML, CSS, Bootstrap 5 
+Client-side Script        :   JavaScript 
+Back-End                    :   MongoDB 
+Database                     :   MySQL 
+Operating System       :   Windows 11 
+ 
+2.7 SOFTWARE DESCRIPTION 
+HTML 
+          HTML stands for Hyper Text Markup Language, which is used to describe the structure 
+of web pages. HTML elements act as the building blocks of a webpage. It is a markup language 
+=== PAGE 21 ===
+10 
+ 
+that web browsers use to display text, images, buttons, forms, tables, and other content in a 
+visual format. 
+   In this project, HTML is used to design the main pages such as Login Page, Dashboard, 
+Project Management Page, Module Management Page, Ticket Creation Page, Assignment 
+Page, and Status Tracking Page. It helps in creating a proper structure for user interac tion and 
+system navigation. 
+Features of HTML include the following: 
+• It is easy to understand and modify. 
+• It helps in creating effective web page layouts. 
+• It supports forms, tables, and hyperlinks. 
+• It can be displayed on all platforms such as Windows and Linux. 
+• Images, icons, and multimedia can be added easily. 
+CSS(Cascading Style Sheet) 
+          CSS stands for Cascading Style Sheet. It is a style sheet language used to describe the 
+presentation and visual appearance of web pages created using HTML. CSS helps in separating 
+the content structure from the design and layout, which makes the web pages easier to manage 
+and maintain. 
+          In this project, CSS is mainly used to improve the appearance of the dashboard, ticket 
+creation forms, project list pages, module management pages, assignment pages, status tracking 
+pages, and report pages. It helps in designing the layout of buttons, tabl es, menus, headings, 
+input fields, and navigation panels in a clear and organized manner. 
+        CSS plays an important role in making the application user -friendly and visually 
+attractive. It is used to define colors, fonts, text styles, margins, padding, alignment, borders, 
+and spacing between elements. By using CSS, the system interface becomes nea t, consistent, 
+and easy for users to understand. 
+         Another major advantage of CSS is that it supports responsive web design, which means 
+the pages can adjust properly to different screen sizes such as desktop, laptop, tablet, and 
+mobile devices. This improves the accessibility of the system. 
+=== PAGE 22 ===
+11 
+ 
+         In the Task Manager Ticketing Tool, CSS also helps in highlighting important sections 
+such as priority labels, status indicators, alerts, notifications, and dashboard cards, making it 
+easier for users to track tasks and project progress. 
+Features of CSS include the following: 
+• Controls font style, size, and colors 
+• Improves page layout and alignment 
+• Makes pages responsive and device-friendly 
+• Supports reusable design styles 
+• Enhances overall user experience 
+• Provides consistent design throughout the system 
+MongoDB 
+        MongoDB is a NoSQL database known for its flexibility, scalability, and document-based 
+storage. It stores data in JSON -like documents, allowing dynamic data structures without 
+requiring a fixed schema. This makes it well -suited for the TexMart – Smart Text ile 
+Management System, where data such as inventory details, sales records, and supplier 
+information may vary in structure. 
+Key benefits include: 
+• Schema-less design for easy updates and flexible data handling 
+• Horizontal scalability to manage growing business data 
+• Fast queries and indexing for real-time data access 
+• High availability through replication and data backup support 
+MongoDB supports TexMart’s requirement for efficient data storage, quick updates, and 
+smooth scalability, ensuring reliable performance for textile business operations. 
+MySQL 
+        MySQL is an open-source relational database management system (RDBMS) that is used 
+to store, organize, and manage data efficiently. It uses Structured Query Language (SQL) for 
+performing operations such as inserting, updating, deleting, and retrieving data  from the 
+=== PAGE 23 ===
+12 
+ 
+database. MySQL is widely used in web application development because it is fast, reliable, 
+secure, and capable of handling large amounts of data. 
+          In the Task Manager Ticketing Tool for Project and Team Management, MySQL is used 
+as the backend database to store all the important information such as user details, project 
+details, module details, ticket information, assignment records, status tracking data, and 
+dashboard reports. It works efficiently with PHP and supports all CRUD operations required 
+for the project. MySQL helps in maintaining data consistency, quick retrieval of records, and 
+secure storage of project -related information, maki ng it highly suitable for this web -based 
+management system. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 24 ===
+13 
+ 
+CHAPTER 3 
+ 
+SYSTEM  DESIGN 
+ 
+3.1 INPUT DESIGN 
+     Input design is the process of converting user -provided data into a format that the system 
+can easily understand and process. It plays a vital role in the effectiveness of the TexMart – 
+Smart Textile Management System and is one of the most critical phases in system 
+development. Poor input design can lead to incorrect data entry, processing errors, and reduced 
+efficiency in business operations. 
+   In TexMart, input design ensures that users and administrators can interact with the system 
+smoothly and efficiently. It focuses on creating a user-friendly interface for entering data such 
+as product details, inventory updates, sales transactions, and supplier information. The goal is 
+to ensure that data entry is accurate, validated, and easy to perform.  The system includes the 
+following input constraints: 
+• All required data such as inventory, sales, and supplier details must be accurately captured 
+and processed. 
+• Forms and menus should be well-structured, simple to navigate, and properly formatted. 
+• Inputs should be validated to prevent errors such as incorrect entries or missing information. 
+• The design should ensure data clarity, availability, and reliability across the system. 
+    Effective input design improves data accuracy, reduces errors, and ensures smooth 
+functioning of the TexMart system. 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 25 ===
+14 
+ 
+Input Forms Used in the System 
+Adding user details  
+      The system includes simple forms to collect essential business and user information. Users 
+are required to enter details such as product name, quantity, price, supplier information, and 
+billing data. These inputs are stored in the system to manage inventory, generate invoices, and 
+track sales activities. This helps streamline operations and ensures accurate record -keeping 
+within the TexMart system. 
+Adding Textile Products 
+     The system allows admins to add textile products by entering details such as product name, 
+category, quantity, price, and supplier information. These products are then stored in the system 
+and displayed in the inventory section for easy management and trac king. This helps in 
+maintaining accurate stock records and ensures smooth textile business operations. 
+Module Details Form 
+      This form is used to create and manage modules under each project. It contains fields such 
+as module name, module description, assigned team member, start date, due date, and module 
+status. These inputs help in dividing the project into manageable parts an d tracking progress 
+easily. 
+3.2 DATABASE DESIGN 
+      The most important consideration in designing the database is how information will be 
+stored and used efficiently. The main objective of designing the database is to store project -
+related data in an organized manner and retrieve it quickly whenever required. 
+The database for this project includes tables such as: 
+• Admin Details 
+• Customer Details 
+• Product Details 
+• Category Details 
+• Product Purchase Details 
+• Payment Details 
+=== PAGE 26 ===
+15 
+ 
+• Customer Feedback 
+     The database is designed using MySQL to ensure data consistency, easy retrieval, and 
+efficient management of project and task records. 
+Table 3.1 Admin Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Admin_id Integer  4  Primary Key  
+Password  Varchar  10  Not Null  
+ 
+Table 3.2 Customer Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Customer_id Integer  4  Primary Key  
+Customer_Name Varchar  10  Not Null  
+Customer_Password Varchar  12  Not Null  
+Customer_Email Varchar  30  Not Null  
+ 
+Table 3.3 Product Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Product_id Integer  4  Primary Key  
+Product_Name Varchar  10  Not Null  
+=== PAGE 27 ===
+16 
+ 
+Product_Description Varchar  60  Not Null  
+Product_Price Double  8  Not Null  
+Product_Image Varchar  50  Not Null  
+Category_Id Varchar  15  Foreign Key  
+Product_Brand Varchar  15  Not Null  
+ 
+Table 3.4 Category Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Category_id Integer  4  Primary Key  
+Category_Name Varchar  10  Not Null  
+ 
+Table 3.5 Product Purchase Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Purchase_id Integer  4  Primary Key  
+Customer_id Integer  4  Foreign Key  
+Product_id Integer  4  Foreign Key  
+Purchase_Date DateTime  Not Null  
+Shipping_Address Varchar  20  Not Null  
+=== PAGE 28 ===
+17 
+ 
+Amount  Decimal  8  Not Null  
+Receipt_Number Varchar  50  Unique  
+ 
+Table 3.6 Payment Details 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Payment_id Integer  4  Primary Key  
+Customer_id Integer  4  Foreign Key  
+Purchase_id Integer  4  Foreign Key  
+Purchase_Date DateTime  Not Null  
+Amount  Decimal  8  Not Null  
+Receipt_Number Varchar  50  Unique  
+ 
+Table 3.7 Customer Feedback 
+ 
+FIELD NAME  TYPE  SIZE  CONSTRAINTS  
+Customer_id Integer  4  Foreign Key  
+Product_id Varchar  20  Not Null  
+Feedback_Description Varchar  255  Not Null  
+Feedback_Rating Integer  4  Not Null  
+=== PAGE 29 ===
+18 
+ 
+3.3 MODULES DESCRIPTION 
+    The main modules in this project are listed below 
+• Admin Panel Module 
+• Supplier and Purchase Module 
+• Stock Management Module 
+• Product Display Module 
+Admin Panel Module 
+    The Admin Panel serves as the control hub for the TexMart – Smart Textile Management 
+System, enabling administrators to manage all system activities efficiently. It provides a user-
+friendly interface with dashboard and reports to monitor overall operations  and performance. 
+Admins can handle user login and authentication, manage roles, and control access within the 
+system. 
+    The panel allows administrators to add, update, and delete product details, ensuring accurate 
+inventory management. It also supports managing supplier information, stock updates, and 
+system records. With integrated reporting features, admins can track data, generate reports, and 
+analyse business performance. Overall, the Admin Panel ensures smooth system operation, 
+improved control, and efficient management of textile business processes.Sub Modules: 
+• User Registration 
+• User Login 
+• Profile Management 
+• Notification Management 
+Supplier and Purchase Module 
+     This module serves as a core component of the TexMart – Smart Textile Management 
+System, focusing on efficient handling of supplier and purchasing activities. It provides a 
+structured environment where administrators can register and manage supplier details, ensuring 
+smooth coordination and communication. The module enables the creation of purchase orders, 
+allowing businesses to procure materials and products in an organized manner.  
+     It also maintains purchase history records, helping track past transactions and supplier 
+performance. Additionally, the module manages invoice and payment records, ensuring 
+=== PAGE 30 ===
+19 
+ 
+accurate financial tracking and transparency. With a user -friendly interface and integrated 
+features, it simplifies procurement processes and improves efficiency. Acting as a bridge 
+between suppliers and the business, this module ensures timely procurement , better resource 
+management, and streamlined operations. 
+Stock Management Module 
+     Designed for efficient inventory control and monitoring, this module plays a vital role in 
+managing stock within the TexMart – Smart Textile Management System. It provides a 
+structured environment for handling stock entry, updates, and tracking of textile products in 
+real time. Users can easily monitor stock levels, ensuring accurate availability of materials and 
+products at all times. 
+    The module includes features such as low stock alerts, helping administrators take timely 
+actions to avoid shortages. It also maintains stock reports and history, enabling better analysis 
+of inventory usage and trends. Admins can manage and update stock details seamlessly through 
+a user-friendly interface. This module enhances accuracy, reduces manual errors, and ensures 
+smooth inventory management, making it essential for efficient textile business operations. 
+Product Display Module 
+     The Product Display Module serves as a key component of the TexMart  – Smart Textile 
+Management System, providing a clear and organized view of textile products. It allows users 
+to browse products through proper listing and categorization, making it easy to find required 
+items. Each product includes detailed information su ch as fabric type, quality, and price, 
+helping users make informed decisions.  
+     The module also supports search and filter options, enabling users to quickly locate products 
+based on their needs. Additionally, it displays product availability status, ensuring users are 
+aware of stock levels in real time. With a user -friendly interface and structured presentation, 
+this module enhances accessibility, improves user experience, and supports efficient product 
+management within the system. 
+3.4 OUTPUT DESIGN 
+     Output Design refers to the information and results generated by the TexMart – Smart 
+Textile Management System for end users. It is the primary purpose of the system, as users 
+evaluate its effectiveness based on the quality and usefulness of its outputs. T he system’s 
+=== PAGE 31 ===
+20 
+ 
+objectives are reflected through outputs such as inventory reports, billing details, sales 
+summaries, and product information displays.    
+    Outputs in TexMart are presented in various forms, including on -screen displays, reports, 
+and graphical representations for better understanding. They may vary in content, frequency, 
+timing, and format depending on user requirements. Well -designed outputs ensure clarity, 
+accuracy, and timely information, helping users make better decisions. Ultimately, the 
+usefulness of the system is determined by how effectively it delivers meaningful and reliable 
+outputs. 
+Viewing Product Details 
+    Users can easily browse textile products such as fabrics, yarns, and materials. Each product 
+page displays key details such as fabric type, quality, price, and availability. This organized 
+layout helps users quickly understand product information and make the right selection, 
+improving overall usability. 
+Stock and Inventory Monitoring 
+    Users can view real-time stock details within the system. The module displays stock levels, 
+product availability, and updates, helping administrators track inventory efficiently. Low stock 
+alerts and stock history provide better control over inventory mana gement and prevent 
+shortages. 
+Sales and Billing Details 
+    The system provides clear billing information, including invoice details, transaction records, 
+and payment status. Users can easily view and manage sales data, ensuring accurate financial 
+tracking and smooth business operations. 
+Comprehensive Reports and Analytics 
+  The system generates detailed reports on various aspects of textile management. Sales Reports 
+highlight revenue, product performance, and transaction history. These reports support better 
+decision-making, improve efficiency, and enhance overall business performance in TexMart. 
+ 
+ 
+ 
+=== PAGE 32 ===
+21 
+ 
+CHAPTER 4 
+ 
+SYSTEM TESTING & IMPLEMENTATION 
+ 
+4.1 SYSTEM TESTING 
+     Testing is an integral part of any system development life cycle. Insufficient and untested 
+applications may lead to system failure, data loss, and reduced performance. Software testing 
+helps in identifying errors, validating system functionalities, and en suring that the application 
+works according to user requirements. 
+     The first step in system testing is to develop a test plan that tests all aspects of the system. 
+Completeness, correctness, reliability, and maintainability of the software are to be tested for 
+the quality assurance that the system meets the specification and requirements for its intended 
+use and performance. System testing is the most useful practical process of executing a program 
+with the objective of finding errors that make the program fail. 
+System testing in this project is done in three phases: 
+• Unit Testing 
+• Integration Testing 
+• Validation Testing 
+• Functional Testing 
+ 
+UNIT TESTING 
+     Unit testing is performed by developers during the development of the TexMart – Smart 
+Textile Management System to identify and fix errors in each module. It is carried out alongside 
+the coding process to ensure that individual modules such as Admin Panel,  Supplier and 
+Purchase, Stock Management, and Product Display work correctly. Each module is tested for 
+its functionality to verify that it performs as expected under different conditions. 
+Forms related to product entry, stock updates, supplier details, and billing are tested to ensure 
+proper data flow and correct execution. If any error occurs, appropriate error messages are 
+=== PAGE 33 ===
+22 
+ 
+displayed to guide the user. Once all modules function correctly without issues, the system 
+proceeds to the next stage of testing. 
+INTEGRATION TESTING 
+    Integration testing in the TexMart – Smart Textile Management System is carried out to 
+identify errors in the interaction between different modules. All modules such as Admin Panel, 
+Supplier and Purchase, Stock Management, and Product Display are integrate d and tested 
+together as a complete system. During this phase, the data flow and communication between 
+modules are verified to ensure smooth and accurate operation. 
+Each module is combined and tested to check whether functions like inventory updates, 
+supplier transactions, and product display work correctly when interconnected. The system is 
+thoroughly tested to ensure all components operate as expected without confli cts. The system 
+also undergoes acceptance testing, where it is validated against user requirements. The results 
+confirm that TexMart performs efficiently and meets all specified requirements. 
+VALIDATION TESTING 
+    Verification and validation testing are essential steps in the development of the TexMart – 
+Smart Textile Management System, performed before the system is delivered to users. These 
+tests ensure that the system meets business requirements and functions as intended. Verification 
+focuses on checking whether each module is developed correctly, while validation ensures the 
+system fulfills its real -world purpose in textile management. Both processes are carried out 
+early to identify and correct errors. 
+In TexMart, validation testing includes checking various scenarios such as entering invalid or 
+empty data in forms like admin login, product entry, stock updates, and supplier details. For 
+instance, if required fields such as product name or quantity are left empty, the system displays 
+appropriate validation messages to alert the user. This ensures that the system behaves correctly 
+under different conditions and maintains data accuracy and reliability. 
+FUNCTIONAL TESTING  
+    Functional testing for the TexMart – Smart Textile Management System involves verifying 
+that all core functionalities of the system, such as inventory management, supplier handling, 
+stock updates, and product display, are working as expected. The aim is to  ensure that all 
+operations run smoothly and meet user requirements. 
+=== PAGE 34 ===
+23 
+ 
+Key Areas Tested: 
+• User Login and Admin Access:Testing secure login, authentication, and role -based access       
+control. 
+•Product Management: Ensuring products can be added, updated, and deleted correctly in the 
+system. 
+• Supplier and Purchase Management:Verifying supplier registration, purchase order creation, 
+and transaction records. 
+• Stock Management: Confirming real -time stock updates, monitoring, and low stock alerts 
+function properly. 
+• Product Display and Search: Ensuring products are listed correctly with details, and 
+search/filter features work efficiently. 
+Test cases are designed to validate each function, ensuring the system meets all requirements. 
+The goal of functional testing is to onfirm that TexMart performs all operations accurately and 
+provides a smooth and efficient user experience. 
+SYSTEM IMPLEMENTATION 
+     The implementation phase of the TexMart – Smart Textile Management System involves 
+deploying the developed system into the working environment and making it ready for use. 
+After the design and development stages, the system was reviewed to ensure it meets the 
+requirements of textile business operations. 
+Steps in System Implementation: 
+• Deployment and Integration: The system was deployed in the working environment with 
+smooth integration into existing processes. The development and support teams ensured that 
+all modules functioned properly without disrupting operations. 
+• Parallel Testing: The system was initially run alongside existing manual methods to verify 
+accuracy and compare results using real -time data. This helped ensure the system operated 
+without errors. 
+• User Training and Support: Users were trained to handle modules such as Admin Panel, 
+Supplier and Purchase, Stock Management, and Product Display, ensuring easy adoption of 
+the system. 
+=== PAGE 35 ===
+24 
+ 
+• Post -Implementation Support: Continuous support was provided to resolve minor issues, 
+improve performance, and assist users during initial usage. 
+The system proved to be user -friendly, efficient, and easy to integrate. User feedback was 
+positive, confirming that TexMart effectively reduces manual work, improves accuracy, and 
+meets the objectives of modern textile management. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 36 ===
+25 
+ 
+    CHAPTER 5 
+ 
+CONCLUSION AND FUTURE ENHANCEMENT 
+ 
+CONCLUSION 
+     The TexMart  – Smart Textile Management System serves as a modern and efficient 
+platform that transforms the way textile businesses manage their operations. With features such 
+as real -time inventory tracking, supplier and purchase management, stock monitoring, and 
+centralized control through the admin panel, the system creates a seamless integration of 
+technology into textile management. It enhances operational efficiency while ensuring accurate 
+and organized data handling. 
+    This system proves to be an effective solution for textile businesses by offering automation, 
+improved accuracy, and better decision -making support. The user -friendly interface, reliable 
+performance, and well -structured modules ensure ease of use and smooth functionality. 
+TexMart goes beyond traditional management methods, providing a smart digital solution that 
+modernizes textile operations and improves overall productivity.  
+5.2 FUTURE ENHANCEMENTS 
+     The system has been designed with flexibility and scalability in mind, allowing future 
+improvements and additional features with minimal integration effort. The following 
+enhancements can further improve its functionality: 
+• Integration of cloud backup for secure data storage and access 
+• SMS/email notifications for stock updates and purchase activities 
+• AI-based analytics for better demand prediction and decision-making 
+• Mobile app development for easy access and real-time monitoring 
+ 
+ 
+ 
+=== PAGE 37 ===
+26 
+ 
+APPENDICES 
+APPENDIX 1 -SAMPLE CODE 
+const API_URL = '/api/products'; 
+let products = []; 
+let cart = [] 
+document.addEventListener('DOMContentLoaded', () => { 
+    const savedTheme = localStorage.getItem('sreeTheme') || 'light'; 
+    document.documentElement.setAttribute('data-theme', savedTheme) 
+    const savedCart = localStorage.getItem('sreeCart'); 
+    if (savedCart) { cart = JSON.parse(savedCart); updateCartIcon(); } 
+    initParticles(); 
+}) 
+function toggleTheme() { 
+    const current = document.documentElement.getAttribute('data-theme'); 
+    const target = current === 'light' ? 'dark' : 'light'; 
+    document.documentElement.setAttribute('data-theme', target); 
+    localStorage.setItem('sreeTheme', target); 
+    showToast(`Switched to ${target} mode`); 
+}function initParticles() { 
+    const canvas = document.getElementById('particleCanvas'); 
+    if (!canvas) return; 
+    const ctx = canvas.getContext('2d'); 
+    canvas.width = window.innerWidth; 
+    canvas.height = canvas.parentElement.offsetHeight; 
+=== PAGE 38 ===
+27 
+ 
+    let particlesArray = []; 
+    const numberOfParticles = 60; 
+    class Particle { 
+        constructor() { 
+            this.x = Math.random() * canvas.width; 
+            this.y = Math.random() * canvas.height; 
+            this.size = Math.random() * 3 + 1; 
+            this.speedX = Math.random() * 1 - 0.5; 
+            this.speedY = Math.random() * 1 - 0.5; 
+        } 
+        update() { 
+            this.x += this.speedX; 
+            this.y += this.speedY; 
+            if (this.size > 0.2) this.size -= 0.005; 
+            if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX; 
+            if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY; 
+        } 
+        draw() { 
+            ctx.fillStyle = 'rgba(255, 159, 28, 0.4)'; 
+            ctx.beginPath(); 
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); 
+            ctx.fill() 
+    function init() { 
+        for (let i = 0; i < numberOfParticles; i++) { 
+=== PAGE 39 ===
+28 
+ 
+            particlesArray.push(new Particle()); 
+        } 
+    } 
+    function animate() { 
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        for (let i = 0; i < particlesArray.length; i++) { 
+            particlesArray[i].update(); 
+            particlesArray[i].draw(); 
+        } 
+        requestAnimationFrame(animate); 
+    } 
+    init(); animate() 
+    window.addEventListener('resize', () => { 
+        canvas.width = window.innerWidth; 
+        canvas.height = canvas.parentElement.offsetHeight; 
+    }); 
+// Intersection Observer for scroll animations 
+function initScrollReveal() { 
+    const elements = document.querySelectorAll('.reveal'); 
+    const observer = new IntersectionObserver((entries) => { 
+        entries.forEach(entry => { 
+            if (entry.isIntersecting) { 
+                entry.target.classList.add('active'); 
+                observer.unobserve(entry.target); 
+=== PAGE 40 ===
+29 
+ 
+            } 
+        }); 
+    }, { threshold: 0.1 }); 
+    elements.forEach(el => observer.observe(el)); 
+async function fetchProducts(isShop = true, isIndex = false) { 
+    try { 
+        const res = await fetch(API_URL); 
+        products = await res.json() 
+        if (isIndex) { 
+            renderCarousel(products); 
+        } else { 
+            populateCategories(); 
+            if (isShop) { renderShop(products); } 
+            else { renderInventory(products); updateDashboardStats(); } 
+        } 
+    } catch (error) { 
+        showToast('Failed to load products'); 
+    } 
+} 
+function getStockBadge(stock) { 
+    if (stock > 20) return `<span style="font-size:0.85rem; color:var(--primary-light); font-
+weight:700;">⬤ In Stock</span>`; 
+    else if (stock > 0) return `<span style="font-size:0.85rem; color:#fca311; font-
+weight:700;">⬤ Low Stock (${stock})</span>`; 
+=== PAGE 41 ===
+30 
+ 
+    return `<span style="font-size:0.85rem; color:#ff4d6d; font-weight:700;">⬤ Out of 
+Stock</span>`; 
+function getRatingHTML() { 
+    const stars = Math.floor(Math.random() * 2) + 4; // 4 or 5 
+    const reviews = Math.floor(Math.random() * 300) + 20; 
+    let html = '<div class="rating">'; 
+    for (let i = 0; i < 5; i++) { html += i < stars ? '★' : '☆'; } 
+    html += `<span>(${reviews})</span></div>`; 
+    return html; 
+// Render Featured Carousel (Index page) 
+function renderCarousel(data) { 
+    const container = document.getElementById('featured-carousel'); 
+    if (!container) return; 
+    const features = data.slice(0, 4); 
+    container.innerHTML = ''; 
+    features.forEach((p, idx) => { 
+        const wrapper = document.createElement('div'); 
+        wrapper.className = 'carousel-card tilt-card reveal'; 
+        wrapper.style.transitionDelay = `${idx * 0.1}s`; 
+        wrapper.innerHTML = ` 
+      <div class="product-card" onclick="window.location.href='shop.html'"> 
+        <div class="ribbon-wrapper"><div class="ribbon">Top Seller</div></div> 
+        <div class="img-container"> 
+          <img src="${p.imageUrl}" alt="${p.name}" class="product-image"> 
+=== PAGE 42 ===
+31 
+ 
+        </div> 
+        <div class="product-info"> 
+          ${getRatingHTML()} 
+          <h3 class="product-title">${p.name}</h3> 
+          <p class="product-price" style="font-size: 1.4rem;">$${p.price.toFixed(2)}</p> 
+        </div> 
+      </div> 
+        container.appendChild(wrapper); 
+    }); 
+    initScrollReveal(); 
+function renderShop(data) { 
+    const container = document.getElementById('product-list'); 
+    if (!container) return; 
+    container.innerHTML = ''; 
+    if (data.length === 0) { 
+        container.innerHTML = '<p class="reveal" style="grid-column: 1/-1; text-align: center; 
+color: var(--text-light); font-size: 1.2rem; padding: 3rem;">No products found.</p>'; 
+        initScrollReveal(); return; 
+    } 
+    data.forEach((p, idx) => { 
+        const wrapper = document.createElement('div'); 
+        wrapper.className = 'tilt-card reveal'; 
+        wrapper.style.transitionDelay = `${(idx % 4) * 0.1}s`; 
+        const ribbonHTML = (p.stock > 100) ? `<div class="ribbon-wrapper"><div 
+class="ribbon">Bestseller</div></div>` : (p.price > 100) ? `<div class="ribbon-
+=== PAGE 43 ===
+32 
+ 
+wrapper"><div class="ribbon" style="background:var(--
+primary);color:#fff;">Premium</div></div>` : '' 
+        wrapper.innerHTML = ` 
+      <div class="product-card" onclick="openQuickView('${p._id}')"> 
+        ${ribbonHTML} 
+        <div class="img-container"> 
+          <img src="${p.imageUrl}" alt="${p.name}" class="product-image"> 
+          <div class="img-overlay-btn">    Quick View</div> 
+        </div> 
+        <div class="product-info"> 
+          <span class="category-tag">${p.category}</span> 
+          <h3 class="product-title">${p.name}</h3> 
+          ${getRatingHTML()} 
+          <p class="product-desc">${p.description.substring(0, 75)}...</p> 
+          <div class="product-footer"> 
+            <div> 
+              <div class="product-price">$${p.price.toFixed(2)}</div> 
+              ${getStockBadge(p.stock)} 
+            </div> 
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); 
+addToCart('${p._id}')" ${p.stock <= 0 ? 'disabled style="background:#ccc;cursor:not-
+allowed;"' : ''}> 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" 
+y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> 
+            </button> 
+=== PAGE 44 ===
+33 
+ 
+          </div> 
+        </div> 
+      </div> 
+        container.appendChild(wrapper); 
+    }); 
+    initScrollReveal(); 
+// Render Inventory Table 
+function renderInventory(data) { 
+    const tbody = document.getElementById('inventory-list'); 
+    if (!tbody) return; 
+    tbody.innerHTML = ''; 
+    if (data.length === 0) { 
+        tbody.innerHTML = '<tr class="reveal"><td colspan="5" style="text-align: center; 
+padding:2rem;">No items match criteria.</td></tr>'; 
+        initScrollReveal(); return; 
+    } 
+    data.forEach((p, idx) => { 
+        const tr = document.createElement('tr'); 
+        tr.className = 'reveal'; 
+        tr.style.transitionDelay = `${(idx % 10) * 0.05}s`; 
+        tr.innerHTML = ` 
+      <td><img src="${p.imageUrl}" alt="${p.name}" style="width: 65px; height: 65px; 
+object-fit: cover; border-radius: 10px; box-shadow:var(--shadow-sm);"></td> 
+      <td> 
+        <strong style="font-size:1.1rem; color:var(--dark);">${p.name}</strong><br> 
+=== PAGE 45 ===
+34 
+ 
+        <span class="category-tag" style="margin-top:0.4rem; font-
+size:0.7rem;">${p.category}</span> 
+      </td> 
+      <td style="font-weight:900; color:var(--primary); font-
+size:1.1rem;">$${p.price.toFixed(2)}</td> 
+      <td>${getStockBadge(p.stock)}</td> 
+      <td> 
+        <div class="action-btns"> 
+          <button class="btn-icon" onclick="editProduct('${p._id}')" title="Edit">     </button> 
+          <button class="btn-icon delete" onclick="deleteProduct('${p._id}')" 
+title="Delete">   </button> 
+        </div> 
+      </td> 
+        tbody.appendChild(tr); 
+    }); 
+    initScrollReveal(); 
+} 
+function openQuickView(id) { 
+    const p = products.find(x => x._id === id); 
+    if (!p) return; 
+    const modal = document.getElementById('quickViewModal'); 
+    const details = document.getElementById('qvDetails'); 
+    details.innerHTML = ` 
+    <h2 style="font-size: 2.5rem; font-weight:900; margin-bottom:0.5rem; color:var(--dark); 
+line-height:1.2;">${p.name}</h2> 
+=== PAGE 46 ===
+35 
+ 
+    <span class="category-tag" style="margin-bottom:1rem;">${p.category}</span> 
+    ${getRatingHTML()} 
+    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 
+1.8;">${p.description}</p> 
+    <div style="font-size: 3rem; font-weight:900; color:var(--primary); margin-
+bottom:0.5rem;">$${p.price.toFixed(2)}</div> 
+    <div style="margin-bottom:2.5rem;">${getStockBadge(p.stock)}</div> 
+    <button class="btn-primary" style="width:100%; padding:1.2rem; font-size:1.2rem; letter-
+spacing:1px;" onclick="addToCart('${p._id}'); closeQuickView();" ${p.stock <= 0 ? 
+'disabled' : ''}> 
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" style="vertical-align:bottom; margin-right:8px;"><path d="M3 3h2l.4 2M7 
+13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 
+0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg> 
+      Add to Shopping Cart 
+    </button 
+    document.getElementById('qvImage').src = p.imageUrl; 
+    modal.classList.add('active'); 
+} 
+function closeQuickView() { 
+document.getElementById('quickViewModal').classList.remove('active'); } 
+function populateCategories() { 
+    const select = document.getElementById('categoryFilter'); 
+    if (!select) return; 
+    const categories = [...new Set(products.map(p => p.category))]; 
+    select.innerHTML = '<option value="All">All Categories</option>'; 
+    categories.forEach(c => select.innerHTML += `<option value="${c}">${c}</option>`); 
+=== PAGE 47 ===
+36 
+ 
+} 
+function handleSearch() { 
+    const term = document.getElementById('searchInput') ? 
+document.getElementById('searchInput').value.toLowerCase() : ''; 
+    const cat = document.getElementById('categoryFilter') ? 
+document.getElementById('categoryFilter').value : 'All'; 
+    const sort = document.getElementById('sortFilter') ? 
+document.getElementById('sortFilter').value : 'default'; 
+    let filtered = products.filter(p => { return (p.name.toLowerCase().includes(term) || 
+p.description.toLowerCase().includes(term)) && (cat === 'All' || p.category === cat); }); 
+    if (sort === 'priceLow') { filtered.sort((a, b) => a.price - b.price); } 
+    else if (sort === 'priceHigh') { filtered.sort((a, b) => b.price - a.price); } 
+    else if (sort === 'nameAZ') { filtered.sort((a, b) => a.name.localeCompare(b.name)); } 
+    renderShop(filtered); 
+} 
+function handleInventorySearch() { 
+    const term = document.getElementById('inventorySearch').value.toLowerCase(); 
+    const filtered = products.filter(p => p.name.toLowerCase().includes(term) || 
+p.category.toLowerCase().includes(term)); 
+    renderInventory(filtered); 
+} 
+function updateDashboardStats() { 
+    if (!document.getElementById('statsGrid')) return; 
+    document.getElementById('statTotalProducts').innerText = products.length; 
+    document.getElementById('statLowStock').innerText = `${products.filter(p => p.stock > 0 
+&& p.stock <= 10).length} Low / ${products.filter(p => p.stock === 0).length} Out`; 
+=== PAGE 48 ===
+37 
+ 
+    document.getElementById('statTotalValue').innerText = `$${products.reduce((sum, p) => 
+sum + (p.price * p.stock), 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}`; 
+} 
+function toggleCart() { 
+    document.getElementById('cartSidebar').classList.toggle('active'); 
+    document.getElementById('cartOverlay').classList.toggle('active'); 
+    renderCart(); 
+} 
+function addToCart(id) { 
+    const p = products.find(x => x._id === id); 
+    if (!p || p.stock <= 0) return; 
+    const existing = cart.find(item => item.product._id === id); 
+    if (existing) { 
+        if (existing.quantity < p.stock) { existing.quantity++; showToast('Quantity increased'); } 
+        else { showToast('Not enough physical stock!', true); } 
+    } else { cart.push({ product: p, quantity: 1 }); showToast('Added to cart successfully!'); } 
+    saveCart(); updateCartIcon(); 
+    if (document.getElementById('cartSidebar').classList.contains('active')) renderCart(); 
+} 
+function updateCartIcon() { 
+    const badge = document.getElementById('cartCount'); 
+    if (badge) badge.innerText = cart.reduce((sum, item) => sum + item.quantity, 0); 
+} 
+function saveCart() { localStorage.setItem('sreeCart', JSON.stringify(cart)); } 
+function changeQuantity(id, delta) { 
+=== PAGE 49 ===
+38 
+ 
+    const item = cart.find(x => x.product._id === id); 
+    if (item) { 
+        if (delta > 0 && item.quantity >= item.product.stock) { showToast('Max stock reached', 
+true); return; } 
+        item.quantity += delta; 
+        if (item.quantity <= 0) cart = cart.filter(x => x.product._id !== id); 
+        saveCart(); updateCartIcon(); renderCart(); 
+    } 
+} 
+function renderCart() { 
+    const container = document.getElementById('cartItems'); 
+    const totalEl = document.getElementById('cartTotal'); 
+    if (!container) return; 
+    container.innerHTML = ''; 
+    if (cart.length === 0) { 
+        container.innerHTML = '<p class="reveal active" style="text-align:center; margin-
+top:2rem; font-size:1.2rem; color:var(--text-light);">Your cart is feeling a bit empty!</p>'; 
+        totalEl.innerText = '0.00'; return; 
+    } 
+    let total = 0; 
+    cart.forEach((item, idx) => { 
+        total += item.product.price * item.quantity; 
+        container.innerHTML += ` 
+      <div class="cart-item reveal active" style="transition-delay:${idx * 0.05}s"> 
+        <img src="${item.product.imageUrl}" alt="img"> 
+=== PAGE 50 ===
+39 
+ 
+        <div class="cart-item-info"> 
+          <div class="cart-item-title">${item.product.name}</div> 
+          <div class="cart-item-price">$${(item.product.price * 
+item.quantity).toFixed(2)}</div> 
+          <div class="quantity-ctrl"> 
+            <button class="quantity-btn" onclick="changeQuantity('${item.product._id}', -1)">-
+</button> 
+            <span>${item.quantity}</span> 
+            <button class="quantity-btn" onclick="changeQuantity('${item.product._id}', 
+1)">+</button> 
+          </div> 
+        </div> 
+      </div> 
+    }); 
+    totalEl.innerText = total.toLocaleString(undefined, { minimumFractionDigits: 2 }); 
+} 
+function checkout() { 
+    if (cart.length === 0) { showToast('Cart is empty', true); return; } 
+    const itemsContainer = document.getElementById('cartMainContent'); 
+    const loader = document.getElementById('checkoutLoader'); 
+    const success = document.getElementById('checkoutSuccess'); 
+    itemsContainer.style.display = 'none'; 
+    loader.classList.add('active'); 
+    setTimeout(() => { 
+        loader.classList.remove('active'); 
+=== PAGE 51 ===
+40 
+ 
+        success.classList.add('active'); 
+        cart = []; saveCart(); updateCartIcon() 
+        setTimeout(() => { 
+            toggleCart(); 
+                     setTimeout(() => { 
+                itemsContainer.style.display = 'block'; 
+                success.classList.remove('active'); 
+                renderCart(); 
+            }, 500); 
+        }, 2500); 
+    }, 2000); 
+} 
+function openModal(isEdit = false) { 
+    document.getElementById('productModal').classList.add('active'); 
+    const title = document.getElementById('modalTitle'); 
+    if (!isEdit) { 
+        title.innerText = 'Add New Product'; document.getElementById('productForm').reset(); 
+document.getElementById('productId').value = ''; 
+    } else { title.innerText = 'Edit Product'; } 
+} 
+function closeModal() { 
+document.getElementById('productModal').classList.remove('active'); } 
+async function saveProduct(e) { 
+    e.preventDefault(); 
+    const id = document.getElementById('productId').value; 
+=== PAGE 52 ===
+41 
+ 
+    const productData = { 
+        name: document.getElementById('name').value, category: 
+document.getElementById('category').value, 
+        description: document.getElementById('description').value, price: 
+parseFloat(document.getElementById('price').value), 
+        stock: parseInt(document.getElementById('stock').value), imageUrl: 
+document.getElementById('imageUrl').value || 'https://images.unsplash.com/photo-
+1620799140408-edc6dcb6d633?auto=format&fit=crop&w=300&q=80' 
+    }; 
+    const method = id ? 'PUT' : 'POST'; 
+    const url = id ? `${API_URL}/${id}` : API_URL; 
+    try { 
+        const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, 
+body: JSON.stringify(productData) }); 
+        if (res.ok) { closeModal(); showToast(id ? 'Product updated!' : 'Product added!'); 
+fetchProducts(false); } 
+        else { const err = await res.json(); showToast('Error: ' + err.message, true); } 
+    } catch (error) { } 
+} 
+function editProduct(id) { 
+    const p = products.find(prod => prod._id === id); 
+    if (p) { 
+        document.getElementById('productId').value = p._id; 
+document.getElementById('name').value = p.name; 
+        document.getElementById('category').value = p.category; 
+document.getElementById('description').value = p.description; 
+=== PAGE 53 ===
+42 
+ 
+        document.getElementById('price').value = p.price; 
+document.getElementById('stock').value = p.stock; 
+        document.getElementById('imageUrl').value = p.imageUrl; openModal(true); 
+    } 
+} 
+async function deleteProduct(id) { 
+    if (confirm('Delete this product permanently?')) { 
+        try { const res = await fetch(`${API_URL}/${id}`, { method: 'DELETE' }); if (res.ok) { 
+showToast('Product deleted'); fetchProducts(false); } } catch (error) { } 
+    } 
+} 
+function showToast(message, isError = false) { 
+    let container = document.getElementById('toastWrapper'); 
+    if (!container) { 
+        container = document.createElement('div'); container.id = 'toastWrapper'; 
+container.className = 'toast-container'; document.body.appendChild(container); 
+    } 
+    const t = document.createElement('div'); 
+    t.className = 'toast'; 
+    if (isError) t.style.borderLeftColor = '#ff4d6d'; 
+    const icon = isError ? 
+        `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" 
+stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" 
+y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>` : 
+=== PAGE 54 ===
+43 
+ 
+        `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" style="color:var(--primary);"><path d="M22 11.08V12a10 10 0 1 1-5.93-
+9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`; 
+    t.innerHTML = `${icon} ${message}`; 
+    const bar = document.createElement('div'); 
+    bar.style.cssText = `position:absolute; bottom:0; left:0; height:4px; width:100%; 
+background:${isError ? '#ff4d6d' : 'var(--primary)'}; animation:shrink 3s linear forwards;`; 
+    t.appendChild(bar) 
+    container.appendChild(t); 
+    setTimeout(() => { 
+        t.style.animation = 'slideOutRight 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards'; 
+        setTimeout(() => t.remove(), 500); 
+    }, 3000); 
+} 
+function initGlobalFeatures() { 
+    const newsletterBtns = document.querySelectorAll('.newsletter-form button'); 
+    newsletterBtns.forEach(btn => { 
+        btn.addEventListener('click', (e) => { 
+            e.preventDefault(); 
+            const input = e.target.previousElementSibling; 
+            if (!input) return; 
+            if (input.value.includes('@')) { 
+                showToast('Subscribed to VIP Newsletter successfully!'); 
+                input.value = ''; 
+            } else { 
+=== PAGE 55 ===
+44 
+ 
+                showToast('Please enter a valid email address.', true); 
+            } 
+    const currentFileName = window.location.pathname.split('/').pop() || 'index.html'; 
+    document.querySelectorAll('.nav-links a').forEach(link => { 
+        if (link.getAttribute('href') === currentFileName) { 
+            link.classList.add('active'); 
+        } else { 
+            link.classList.remove('active'); 
+        } 
+    }); 
+    const scrollTopBtn = document.createElement('button'); 
+    scrollTopBtn.innerHTML = '↑'; 
+    scrollTopBtn.title = 'Scroll To Top'; 
+    scrollTopBtn.style.cssText = 'position:fixed; bottom:30px; left:30px; width:50px; 
+height:50px; border-radius:50%; background:var(--primary); color:#fff; border:none; 
+cursor:pointer; font-size:1.8rem; font-weight:900; box-shadow:var(--shadow-lg); opacity:0; 
+transition:all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); z-index:2000; pointer-events:none; 
+display:flex; justify-content:center; align-items:center; transform:translateY(20px); border: 
+2px solid var(--bg-color);'; 
+    scrollTopBtn.addEventListener('mouseover', () => { scrollTopBtn.style.transform = 
+'translateY(-5px) scale(1.1)'; }); 
+    scrollTopBtn.addEventListener('mouseout', () => { scrollTopBtn.style.transform = 
+'translateY(0) scale(1)'; }); 
+    document.body.appendChild(scrollTopBtn); 
+indow.addEventListener('scroll', () => { 
+        if (window.scrollY > 400) { 
+=== PAGE 56 ===
+45 
+ 
+            scrollTopBtn.style.opacity = '1'; 
+            scrollTopBtn.style.pointerEvents = 'all'; 
+            if (!scrollTopBtn.matches(':hover')) scrollTopBtn.style.transform = 'translateY(0) 
+scale(1)'; 
+        } else { 
+            scrollTopBtn.style.opacity = '0'; 
+            scrollTopBtn.style.pointerEvents = 'none'; 
+            scrollTopBtn.style.transform = 'translateY(20px) scale(0.9)'; 
+        } 
+    }); 
+    scrollTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 
+'smooth' }); }); 
+document.addEventListener('DOMContentLoaded', () => { initGlobalFeatures(); }); 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 57 ===
+46 
+ 
+APPENDIX 2 -SAMPLE SCREEN SHOTS 
+ 
+ 
+Figure A 2.1 Home Page 
+ 
+ 
+Figure A 2.2 Shop Checklist 
+
+=== PAGE 58 ===
+47 
+ 
+ 
+Figure A 2.3 Journal Page 
+ 
+ 
+Figure A 2.4  Eco View 
+ 
+ 
+
+=== PAGE 59 ===
+48 
+ 
+ 
+ 
+Figure A 2.5 Accounts Page 
+ 
+ 
+Figure A 2.6 Product Available View 
+ 
+
+=== PAGE 60 ===
+49 
+ 
+ 
+Figure A 2.7 Billing Page 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 61 ===
+50 
+ 
+REFERENCES 
+ 
+BOOK REFERENCES 
+1. Parisi, T. (1st ed.). Learning virtual reality: Developing immersive experiences and 
+applications for desktop, web, and mobile. O’Reilly Media, 2015.  
+2. Flanagan, D. (7th ed.). JavaScript: The definitive guide. O’Reilly Media, 2020.  
+3. Freeman, E., & Robson, E. (2nd ed.). Head First HTML and CSS. O’Reilly Media, 2012.  
+4. Freeman, A. (1st ed.). Pro React 18. Apress, 2023.  
+5. Karpov, V. (1st ed.). Professional Node.js: Building JavaScript based scalable software. Wrox, 
+2013.  
+6. Johanan, J. Learning MongoDB. Packt Publishing, 2016.  
+7. Morris, J. Build your own Shopify dropshipping store in 2024: A beginner’s guide. Independent 
+Publishing, 2024.  
+ 
+WEBSITE REFERENCES 
+1. http://www.codeproject.com  
+2. http://www.stackoverflow.org 
+3. http://www.codeacademy.com 
+4. http://www.w3schools.com 
+5. https://www.javatpoint.com  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PAGE 62 ===
+51 
+ 
+MAPPING OF PROJECT TO SDG 
+ 
+SDG 8 – Decent Work and Economic Growth 
+    The proposed TexMart – Smart Textile Management System strongly supports SDG 8: 
+Decent Work and Economic Growth. The system enhances operational efficiency in textile 
+management by enabling effective tracking of inventory, orders, production processes, and 
+workforce activities. It helps reduce manual work, min imize errors, and improve overall 
+accountability within the organization. By streamlining textile workflows, optimizing resource 
+utilization, and ensuring timely production and delivery, the system contributes to increased 
+productivity, better working conditions, and sustainable economic growth in the textile sector. 
+SDG 9 – Industry, Innovation and Infrastructure 
+    The project also aligns with SDG 9: Industry, Innovation and Infrastructure by introducing 
+a centralized digital platform for managing textile operations such as inventory, production, 
+orders, and reporting. It promotes innovation through the use of modern web technologies like 
+HTML, CSS, JavaScript, PHP, and MySQL. The system supports digital transformation in the 
+textile industry by replacing traditional manual processes with an automated, efficient, and 
+scalable infrastructure, improving overall operational performance and reliability. 
+SDG 16 – Peace, Justice and Strong Institutions 
+    This project also supports SDG 16: Peace, Justice and Strong Institutions by enhancing 
+transparency, accountability, and structured workflow management within the Texmart textile 
+system. Features such as inventory tracking, order status updates, production  monitoring, and 
+reporting dashboards help maintain clear records and responsibility tracking across operations. 
+This contributes to stronger organizational processes, improved decision -making, and better 
+governance within the textile industry. 

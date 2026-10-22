@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SREE POONGUZHALI COTTON MILLS – Smart Textile Industry & Management System | Chithode, Erode</title>
+  <meta name="description" content="Sree Poonguzhali Cotton Mills (S.F. No: 41/1A, Gangapuram to Sadaiyampalayam Road, Chithode, Erode - 638 102). Premier textile industry, pure combed cottons, silks, linens, and wholesale fabric enterprise.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Modern Commercial Design System Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.3">
+</head>
+<body>
+
+  <!-- Floating Yarn & Fiber Ambient Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <div class="site-wrapper">
+
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement">
+      <span>✨ <strong>SREE POONGUZHALI COTTON MILLS</strong>: Gangapuram Looms Direct Quality Combed Cottons & Silks | Flat 10% Off with code <strong>POONGUZHALI10</strong> | GSTIN: <strong>33ADSFS4275Q1Z3</strong> <a href="#catalogSection">Shop Looms &rarr;</a></span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="main-navbar" id="mainHeader">
+      <div class="container nav-inner">
+        
+        <!-- Brand Identity -->
+        <a href="#heroSection" class="brand-link" id="brandLogoLink">
+          <div class="brand-icon">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <div class="brand-title-wrap">
+            <h1>SREE POONGUZHALI COTTON MILLS</h1>
+            <span>Smart Textile Industry • Chithode, Erode</span>
+          </div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav>
+          <ul class="nav-links-menu">
+            <li><a href="#heroSection" class="nav-item-link active">Home</a></li>
+            <li><a href="#categoriesSection" class="nav-item-link">Collections</a></li>
+            <li><a href="#catalogSection" class="nav-item-link">Fabrics Store <span class="nav-badge-pill">Live</span></a></li>
+            <li><a href="#aboutSection" class="nav-item-link">About & Licenses</a></li>
+            <li><a href="#millStorySection" class="nav-item-link">Heritage & Team</a></li>
+            <li><a href="#b2bSection" class="nav-item-link">B2B Wholesale</a></li>
+            <li><a href="#reviewsSection" class="nav-item-link">Reviews</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Controls -->
+        <div class="nav-controls">
+          
+          <!-- Theme Switcher -->
+          <button class="btn-icon-nav" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+
+          <!-- Mill Management Portal Trigger -->
+          <button class="btn-manager-portal" onclick="openStoreManagerModal()" title="Sree Poonguzhali Mill Operations & Management Portal">
+            <i class="fa-solid fa-gears"></i> <span class="btn-label">Mill Portal</span>
+          </button>
+
+          <!-- Shopping Cart Drawer Trigger -->
+          <button class="btn-icon-nav" id="cartTriggerBtn" onclick="toggleCartDrawer()" title="View Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-counter-bubble" id="cartCountBadge">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button class="btn-icon-nav btn-hamburger-menu" id="mobileMenuBtn" onclick="toggleMobileNav()" title="Open Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-nav-header">
+        <div class="brand-link">
+          <div class="brand-icon">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <div class="brand-title-wrap">
+            <h2 style="font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0;">SREE POONGUZHALI COTTON MILLS</h2>
+            <span style="font-size: 0.68rem; color: var(--text-secondary); text-transform: uppercase;">Smart Textile Industry</span>
+          </div>
+        </div>
+        <button class="btn-icon-nav" onclick="toggleMobileNav()" title="Close Navigation">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="mobile-nav-body">
+        <ul class="mobile-nav-links">
+          <li><a href="#heroSection" onclick="toggleMobileNav()"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#categoriesSection" onclick="toggleMobileNav()"><i class="fa-solid fa-shapes"></i> Collections</a></li>
+          <li><a href="#catalogSection" onclick="toggleMobileNav()"><i class="fa-solid fa-bag-shopping"></i> Fabrics Store <span class="nav-badge-pill">Live</span></a></li>
+          <li><a href="#aboutSection" onclick="toggleMobileNav()"><i class="fa-solid fa-certificate"></i> About & Licenses</a></li>
+          <li><a href="#millStorySection" onclick="toggleMobileNav()"><i class="fa-solid fa-scroll"></i> Heritage & Team</a></li>
+          <li><a href="#b2bSection" onclick="toggleMobileNav()"><i class="fa-solid fa-boxes-packing"></i> B2B Wholesale</a></li>
+          <li><a href="#reviewsSection" onclick="toggleMobileNav()"><i class="fa-solid fa-star"></i> Reviews</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+          <button class="btn-manager-portal w-100" onclick="toggleMobileNav(); openStoreManagerModal();">
+            <i class="fa-solid fa-gears"></i> Mill Management Portal
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner-section" id="heroSection">
+      <div class="hero-glow-bg"></div>
+      <div class="container hero-grid">
+        
+        <div class="hero-text-col">
+          <div class="hero-badge-tag">
+            <i class="fa-solid fa-industry"></i> Sree Poonguzhali Cotton Mills • Chithode, Erode - 638 102
+          </div>
+          <h2 class="hero-main-title">
+            Sree Poonguzhali Cotton Mills <span class="serif-accent">Textile Industry</span> & Smart Management
+          </h2>
+          <p class="hero-desc-text">
+            Premier spinning and weaving textile industry operating modern powerlooms at Gangapuram, Chithode, Erode. Producing certified Shankar-6 combed cottons, mulberry silks, natural linens, and artisan brocades with real-time mill stock control, automated GST invoicing, and B2B wholesale dispatch.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#catalogSection" class="btn-primary-hero">
+              <i class="fa-solid fa-bag-shopping"></i> Explore Fabric Catalog
+            </a>
+            <a href="#aboutSection" class="btn-secondary-hero">
+              <i class="fa-solid fa-certificate"></i> Mill Licenses & Quality
+            </a>
+          </div>
+
+          <!-- Trust Factors -->
+          <div class="hero-trust-strip">
+            <div class="trust-badge-item">
+              <i class="fa-solid fa-leaf"></i>
+              <span>GOTS Organic Cotton</span>
+            </div>
+            <div class="trust-badge-item">
+              <i class="fa-solid fa-certificate"></i>
+              <span>ISO 9001:2015 Mill</span>
+            </div>
+            <div class="trust-badge-item">
+              <i class="fa-solid fa-handshake"></i>
+              <span>Direct Fair Trade Looms</span>
+            </div>
+            <div class="trust-badge-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Express Mill Dispatch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <div class="hero-showcase-box">
+            <div class="hero-image-wrap">
+              <img src="assets/textile_weaving_mill.jpg" alt="Sree Poonguzhali Cotton Mills Modern Weaving Facility at Gangapuram Chithode Erode" id="heroLoomImg">
+              <div class="hero-card-floating-badge">
+                <i class="fa-solid fa-circle-check text-emerald"></i> CEO: C. Prabhu • Sree Poonguzhali Cotton Mills
+              </div>
+              <div class="hero-stats-glass-bar">
+                <div class="glass-metric-pill">
+                  <h4>45,000+</h4>
+                  <p>Meters / Month</p>
+                </div>
+                <div class="glass-metric-pill">
+                  <h4>500+</h4>
+                  <p>Looms & Weavers</p>
+                </div>
+                <div class="glass-metric-pill">
+                  <h4>100%</h4>
+                  <p>Quality Checked</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Curated Collections Showcase -->
+    <section class="section-wrapper" id="categoriesSection">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-subtitle-tag"><i class="fa-solid fa-gem"></i> Curated Selections</span>
+          <h3 class="section-title">Explore by <span class="highlight">Fabric Heritage</span></h3>
+          <p class="section-desc">Each weave tells the story of generations of artisanal mastery, spun from natural yarns and woven on traditional looms.</p>
+        </div>
+
+        <div class="categories-slider-grid">
+          
+          <!-- Category 1: Silk -->
+          <div class="category-visual-card" onclick="filterCategoryFromCard('Silk')">
+            <div class="cat-card-img-wrap">
+              <img src="assets/kanchipuram_silk.jpg" alt="Pure Kanchipuram Silk">
+              <div class="cat-card-overlay"></div>
+            </div>
+            <div class="cat-card-body">
+              <div>
+                <h4>Pure Mulberry Silk</h4>
+                <p>Pure zari borders, rich lustrous texture, woven for bridal couture and temple festivals.</p>
+              </div>
+              <span class="cat-explore-link">Browse Silks &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Cotton -->
+          <div class="category-visual-card" onclick="filterCategoryFromCard('Cotton')">
+            <div class="cat-card-img-wrap">
+              <img src="assets/organic_cotton_rolls.jpg" alt="Organic Erode Cotton">
+              <div class="cat-card-overlay"></div>
+            </div>
+            <div class="cat-card-body">
+              <div>
+                <h4>Organic Erode Cotton</h4>
+                <p>GOTS certified combed cotton, ultra-breathable, gentle on the skin, and hand-dyed.</p>
+              </div>
+              <span class="cat-explore-link">Browse Cottons &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Linen -->
+          <div class="category-visual-card" onclick="filterCategoryFromCard('Linen')">
+            <div class="cat-card-img-wrap">
+              <img src="assets/linen_fabric.jpg" alt="Artisanal Flax Linen">
+              <div class="cat-card-overlay"></div>
+            </div>
+            <div class="cat-card-body">
+              <div>
+                <h4>Natural Flax Linen</h4>
+                <p>Textured European flax yarn, airy drape, breathable weave for summer garments.</p>
+              </div>
+              <span class="cat-explore-link">Browse Linens &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Brocade -->
+          <div class="category-visual-card" onclick="filterCategoryFromCard('Brocade')">
+            <div class="cat-card-img-wrap">
+              <img src="assets/banarasi_brocade.jpg" alt="Royal Banarasi Brocade">
+              <div class="cat-card-overlay"></div>
+            </div>
+            <div class="cat-card-body">
+              <div>
+                <h4>Royal Banarasi Brocade</h4>
+                <p>Opulent gold jacquard floral embroidery on emerald and crimson silk foundations.</p>
+              </div>
+              <span class="cat-explore-link">Browse Brocades &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Main Fabric Catalog & Shopping Experience -->
+    <section class="section-wrapper" id="catalogSection" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-subtitle-tag"><i class="fa-solid fa-shirt"></i> Live Catalog</span>
+          <h3 class="section-title">Shop Premium <span class="highlight">Textile Fabrics</span></h3>
+          <p class="section-desc">Order fabric by the meter with transparent stock counts, detailed GSM specifications, and instant tax invoice generation.</p>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="shop-filter-bar">
+          
+          <div class="search-input-group">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="fabricSearchInput" placeholder="Search fabrics by weave, yarn, color, or brand..." oninput="handleCatalogSearch()">
+          </div>
+
+          <div class="category-pills-row" id="categoryPillsRow">
+            <button class="filter-pill active" onclick="setCategoryFilter('All')">All Fabrics</button>
+            <button class="filter-pill" onclick="setCategoryFilter('Silk')">Pure Silk</button>
+            <button class="filter-pill" onclick="setCategoryFilter('Cotton')">Organic Cotton</button>
+            <button class="filter-pill" onclick="setCategoryFilter('Linen')">Flax Linen</button>
+            <button class="filter-pill" onclick="setCategoryFilter('Brocade')">Banarasi Brocade</button>
+            <button class="filter-pill" onclick="setCategoryFilter('Denim')">Denim & Twill</button>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <select id="catalogSortSelect" class="sort-select-box" onchange="handleCatalogSort()">
+              <option value="featured">Featured Fabrics</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Fabric Cards Grid -->
+        <div class="fabrics-grid" id="fabricsGridContainer">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mill Craftsmanship, Heritage & Project Team Collaboration -->
+    <section class="section-wrapper mill-story-section" id="millStorySection">
+      <div class="container story-grid">
+        
+        <div class="story-content">
+          <span class="section-subtitle-tag"><i class="fa-solid fa-industry"></i> Industrial Mill Heritage & Modern Infrastructure</span>
+          <h3>Rooted in Tamil Nadu's Historic <span class="highlight">Textile Industry</span></h3>
+          <p>
+            <strong>Sree Poonguzhali Cotton Mills</strong> is a premier spinning and weaving textile industry located in <strong>Gangapuram, Chithode, Erode - 638 102</strong> (S.F. No: 41/1A, Gangapuram to Sadaiyampalayam Road). Operating high-efficiency modern powerlooms and partnering with master artisanal weaving clusters, the industry specializes in Shankar-6 combed organic cotton yarns, pure mulberry silks, natural linens, and commercial fabrics.
+          </p>
+
+          <!-- Mill Operational & Craftsmanship Highlights -->
+          <div class="mill-highlights-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 22px 0;">
+            <div style="background: rgba(22, 163, 74, 0.06); border: 1px solid rgba(22, 163, 74, 0.2); border-radius: var(--radius-md); padding: 14px 16px;">
+              <div style="font-weight: 800; color: var(--emerald-dark); font-size: 1.05rem; margin-bottom: 3px;"><i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> 50+ Modern Looms</div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">High-efficiency rapier looms producing over 1,200m daily with precision warp tension control.</div>
+            </div>
+            <div style="background: rgba(217, 119, 6, 0.06); border: 1px solid rgba(217, 119, 6, 0.2); border-radius: var(--radius-md); padding: 14px 16px;">
+              <div style="font-weight: 800; color: #b45309; font-size: 1.05rem; margin-bottom: 3px;"><i class="fa-solid fa-seedling" style="color: var(--emerald-primary);"></i> 100% Shankar-6 Cotton</div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Long-staple organic cotton directly procured from verified ginners in Kongu cotton belt.</div>
+            </div>
+            <div style="background: rgba(37, 99, 235, 0.06); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: var(--radius-md); padding: 14px 16px;">
+              <div style="font-weight: 800; color: #1d4ed8; font-size: 1.05rem; margin-bottom: 3px;"><i class="fa-solid fa-file-invoice-dollar" style="color: #2563eb;"></i> GST & HSN Invoicing</div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Enterprise-grade B2B dispatch with computerized tax invoices and batch trace codes.</div>
+            </div>
+            <div style="background: rgba(147, 51, 234, 0.06); border: 1px solid rgba(147, 51, 234, 0.2); border-radius: var(--radius-md); padding: 14px 16px;">
+              <div style="font-weight: 800; color: #7e22ce; font-size: 1.05rem; margin-bottom: 3px;"><i class="fa-solid fa-award" style="color: #9333ea;"></i> ISO 9001 & GOTS Standard</div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Audited quality adherence meeting international weaving, dyeing, and tensile standards.</div>
+            </div>
+          </div>
+
+          <div class="quality-features-list">
+            
+            <div class="quality-feature-item">
+              <div class="quality-icon-box"><i class="fa-solid fa-microscope"></i></div>
+              <div class="quality-text">
+                <h5>4-Point ASTM D5430 Inspection</h5>
+                <p>Every fabric roll is inspected for tensile strength, thread count, and yarn uniformity.</p>
+              </div>
+            </div>
+
+            <div class="quality-feature-item">
+              <div class="quality-icon-box"><i class="fa-solid fa-droplet-slash"></i></div>
+              <div class="quality-text">
+                <h5>AZO-Free Botanical Dyes</h5>
+                <p>Non-toxic, hypoallergenic natural dye treatments with Grade 4.5+ wash fastness.</p>
+              </div>
+            </div>
+
+            <div class="quality-feature-item">
+              <div class="quality-icon-box"><i class="fa-solid fa-recycle"></i></div>
+              <div class="quality-text">
+                <h5>TNPCB Zero Liquid Discharge</h5>
+                <p>100% recycled process water protecting local Bhavani and Cauvery river basins.</p>
+              </div>
+            </div>
+
+            <div class="quality-feature-item">
+              <div class="quality-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="quality-text">
+                <h5>Zero Shrinkage Guarantee</h5>
+                <p>Sanforized and mercerized fabrics calibrated for institutional garment manufacturing.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="story-visual-frame">
+          <img src="assets/organic_cotton_rolls.jpg" alt="Sree Poonguzhali Cotton Mills Finished Fabric Storage">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Module 5: About Us (License, Fabric Quality Standards & Compliance) Section -->
+    <section class="section-wrapper" id="aboutSection" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-subtitle-tag"><i class="fa-solid fa-certificate"></i> Project Module 5: Mill Profile & Compliance</span>
+          <h3 class="section-title">Official Mill Licenses & <span class="highlight">Quality Standards</span></h3>
+          <p class="section-desc">Sree Poonguzhali Cotton Mills (Gangapuram, Chithode, Erode - 638 102) complies with rigorous national and international textile production standards, certified organic sourcing, and ethical manufacturing.</p>
+        </div>
+
+        <!-- 5 Official Licenses & Certifications Cards -->
+        <div class="subsection-divider-head">
+          <h4><i class="fa-solid fa-stamp text-accent"></i> Statutory Mill Licenses & Authorizations</h4>
+          <span class="subhead-meta">Central Government & State Industry Authorizations</span>
+        </div>
+
+        <div class="license-grid-cards">
+          
+          <div class="license-cert-card">
+            <div class="license-icon-head">
+              <div class="license-emblem" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="pill-badge green"><i class="fa-solid fa-circle-check"></i> Certified Valid</span>
+            </div>
+            <h4>GOTS Organic Standard</h4>
+            <span class="cert-number">Lic. No: GOTS-IN-2024-884</span>
+            <p>100% Global Organic Textile Standard certified raw cotton procurement and pesticide-free spinning procedures.</p>
+          </div>
+
+          <div class="license-cert-card">
+            <div class="license-icon-head">
+              <div class="license-emblem" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <span class="pill-badge green"><i class="fa-solid fa-circle-check"></i> Certified</span>
+            </div>
+            <h4>ISO 9001:2015 QMS</h4>
+            <span class="cert-number">Cert. No: ISO-QMS-4412/ERD</span>
+            <p>International Quality Management System certification for yarn spinning, powerloom weaving, and defect monitoring.</p>
+          </div>
+
+          <div class="license-cert-card">
+            <div class="license-icon-head">
+              <div class="license-emblem" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                <i class="fa-solid fa-landmark"></i>
+              </div>
+              <span class="pill-badge gold"><i class="fa-solid fa-building-flag"></i> Govt of India</span>
+            </div>
+            <h4>Ministry of Textiles Reg.</h4>
+            <span class="cert-number">Reg. No: TN/ERD/TXM-4921/2004</span>
+            <p>Official commercial mill registration under the Textile Commissioner, Government of India, Chithode / Erode Zone.</p>
+          </div>
+
+          <div class="license-cert-card">
+            <div class="license-icon-head">
+              <div class="license-emblem" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+                <i class="fa-solid fa-water"></i>
+              </div>
+              <span class="pill-badge green"><i class="fa-solid fa-recycle"></i> TNPCB Green</span>
+            </div>
+            <h4>TNPCB Zero Liquid Discharge</h4>
+            <span class="cert-number">ZLD Consent No: TNPCB/ZLD-2023-77</span>
+            <p>Tamil Nadu Pollution Control Board Category-A green industrial clearance with total biological effluent recycling.</p>
+          </div>
+
+          <div class="license-cert-card">
+            <div class="license-icon-head">
+              <div class="license-emblem" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+                <i class="fa-solid fa-ribbon"></i>
+              </div>
+              <span class="pill-badge green"><i class="fa-solid fa-shield"></i> Authentic</span>
+            </div>
+            <h4>Silk Mark Authorised User</h4>
+            <span class="cert-number">Silk Mark AU: SMOI-SZ-9021</span>
+            <p>Silk Mark Organisation of India certified 100% natural mulberry silk content verification on all zari fabrics.</p>
+          </div>
+
+        </div>
+
+        <!-- Fabric Quality Parameters Grid -->
+        <div class="subsection-divider-head" style="margin-top: 48px;">
+          <h4><i class="fa-solid fa-microscope text-accent"></i> Fabric Quality Assurance Standards</h4>
+          <span class="subhead-meta">Calibrated In-House Physical & Chemical Laboratory Tests</span>
+        </div>
+
+        <div class="quality-standards-grid">
+          
+          <div class="quality-param-box">
+            <div class="quality-param-head">
+              <div class="quality-icon-circle"><i class="fa-solid fa-square-check"></i></div>
+              <h5>ASTM D5430 4-Point System</h5>
+            </div>
+            <p>Every meter of woven fabric is graded through automated and manual light-table inspection for warp breaks, float defects, and snags.</p>
+            <span class="metric-value"><i class="fa-solid fa-circle-check"></i> Max Defect Score: &lt; 15 pts / 100 sq.yd</span>
+          </div>
+
+          <div class="quality-param-box">
+            <div class="quality-param-head">
+              <div class="quality-icon-circle"><i class="fa-solid fa-dumbbell"></i></div>
+              <h5>ISO 13934-1 Tensile Testing</h5>
+            </div>
+            <p>High-precision strip tensile tests confirm warp and weft breaking tenacity, seam slippage resistance, and burst resistance.</p>
+            <span class="metric-value"><i class="fa-solid fa-circle-check"></i> Tensile: &gt; 450 N Warp / 380 N Weft</span>
+          </div>
+
+          <div class="quality-param-box">
+            <div class="quality-param-head">
+              <div class="quality-icon-circle"><i class="fa-solid fa-sun"></i></div>
+              <h5>ISO 105-C06 Color Fastness</h5>
+            </div>
+            <p>Botanical and VAT dyed cottons undergo accelerated laundering and Xenon-arc light exposure tests to guarantee zero fading.</p>
+            <span class="metric-value"><i class="fa-solid fa-circle-check"></i> Wash Fastness: Grade 4.5+ Rating</span>
+          </div>
+
+          <div class="quality-param-box">
+            <div class="quality-param-head">
+              <div class="quality-icon-circle"><i class="fa-solid fa-compass-drafting"></i></div>
+              <h5>Combed Yarn Count Calibration</h5>
+            </div>
+            <p>Uniformity index (UI 85%+) calibrated for 30s, 40s, 60s, and 80s Ne count ringspun cotton yarns with near-zero neps.</p>
+            <span class="metric-value"><i class="fa-solid fa-circle-check"></i> Spinning Tolerances: &plusmn; 1.5% CV</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- B2B Wholesale & Custom Fabric Orders -->
+    <section class="section-wrapper" id="b2bSection">
+      <div class="container">
+        
+        <div class="b2b-procurement-card">
+          <div class="b2b-grid">
+            
+            <div>
+              <span class="section-subtitle-tag"><i class="fa-solid fa-building-wheat"></i> For Boutiques & Garment Mills</span>
+              <h3 style="font-size: 2.3rem; margin-bottom: 16px;">Direct Mill Bulk Procurement</h3>
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                Are you a fashion designer, apparel exporter, or retail store looking for 50 to 5,000 meters of customized weave, custom dyeing, or bespoke GSM fabric? Partner directly with <strong>Sree Poonguzhali Cotton Mills</strong> Gangapuram, Chithode, Erode production facility with guaranteed dispatch timelines.
+              </p>
+              
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: var(--text-main);">
+                  <i class="fa-solid fa-circle-check text-emerald"></i> Custom GSM & Roll Widths (44" to 60")
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: var(--text-main);">
+                  <i class="fa-solid fa-circle-check text-emerald"></i> GST Invoicing with HSN Codes (5208 / 5007)
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: var(--text-main);">
+                  <i class="fa-solid fa-circle-check text-emerald"></i> Free Courier Fabric Swatch Kit for Sampling
+                </li>
+              </ul>
+            </div>
+
+            <div class="b2b-form-box">
+              <h4 style="font-size: 1.25rem; margin-bottom: 18px; color: var(--text-main);"><i class="fa-solid fa-paper-plane text-accent"></i> Request Mill Wholesale Quote</h4>
+              
+              <form id="b2bInquiryForm" onsubmit="handleB2bSubmit(event)">
+                <div class="form-group-field">
+                  <label for="b2bCompanyName">Company / Boutique Name</label>
+                  <input type="text" id="b2bCompanyName" class="form-input-control" placeholder="e.g. Ramesh Couture Studio" required>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group-field">
+                    <label for="b2bFabricType">Required Fabric</label>
+                    <select id="b2bFabricType" class="form-select-control" required>
+                      <option value="Pure Kanchipuram Silk">Pure Kanchipuram Silk</option>
+                      <option value="Organic Erode Cotton (180 GSM)">Organic Erode Cotton (180 GSM)</option>
+                      <option value="Natural Flax Linen (210 GSM)">Natural Flax Linen (210 GSM)</option>
+                      <option value="Royal Banarasi Brocade">Royal Banarasi Brocade</option>
+                      <option value="Heavy Indigo Denim Twill">Heavy Indigo Denim Twill</option>
+                    </select>
+                  </div>
+                  <div class="form-group-field">
+                    <label for="b2bMeters">Estimated Meters</label>
+                    <input type="number" id="b2bMeters" class="form-input-control" min="20" step="10" value="150" required>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group-field">
+                    <label for="b2bEmail">Business Email</label>
+                    <input type="email" id="b2bEmail" class="form-input-control" placeholder="orders@studio.in" required>
+                  </div>
+                  <div class="form-group-field">
+                    <label for="b2bPhone">Contact Phone</label>
+                    <input type="tel" id="b2bPhone" class="form-input-control" placeholder="+91 98420 55667" required>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-primary-hero" style="width: 100%; justify-content: center;">
+                  <i class="fa-solid fa-calculator"></i> Calculate & Submit Procurement Inquiry
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Verified Customer Reviews -->
+    <section class="section-wrapper" id="reviewsSection">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-subtitle-tag"><i class="fa-solid fa-star"></i> Testimonials</span>
+          <h3 class="section-title">Loved by <span class="highlight">Boutiques & Designers</span></h3>
+          <p class="section-desc">Read feedback from master tailors, fashion houses, and retail clients across India.</p>
+        </div>
+
+        <div class="reviews-grid-wrap" id="customerReviewsGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Write Review Form Card -->
+        <div style="margin-top: 48px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 36px;">
+          <h4 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-main);"><i class="fa-solid fa-pen-to-square text-accent"></i> Write a Fabric Review</h4>
+          
+          <form id="writeReviewForm" onsubmit="handleReviewSubmit(event)">
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="rvCustomerName">Your Name / Studio Name</label>
+                <input type="text" id="rvCustomerName" class="form-input-control" placeholder="e.g. Ananya Designer Studio" required>
+              </div>
+              <div class="form-group-field">
+                <label for="rvFabricPurchased">Fabric Evaluated</label>
+                <select id="rvFabricPurchased" class="form-select-control" required>
+                  <!-- Populated by app.js -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-field">
+              <label>Quality Rating (1 to 5 Stars)</label>
+              <div style="display: flex; gap: 8px; font-size: 1.5rem; color: #f59e0b; cursor: pointer; margin-top: 4px;" id="starRatingSelector">
+                <i class="fa-solid fa-star" data-star="1" onclick="selectStarRating(1)"></i>
+                <i class="fa-solid fa-star" data-star="2" onclick="selectStarRating(2)"></i>
+                <i class="fa-solid fa-star" data-star="3" onclick="selectStarRating(3)"></i>
+                <i class="fa-solid fa-star" data-star="4" onclick="selectStarRating(4)"></i>
+                <i class="fa-solid fa-star" data-star="5" onclick="selectStarRating(5)"></i>
+              </div>
+              <input type="hidden" id="selectedStarVal" value="5">
+            </div>
+
+            <div class="form-group-field">
+              <label for="rvComment">Your Review & Assessment</label>
+              <textarea id="rvComment" class="form-textarea-control" rows="3" placeholder="Share your experience regarding fabric drape, softness, wash fastness, and packaging..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-hero" style="padding: 12px 28px;">
+              <i class="fa-solid fa-check"></i> Post Verified Review
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Slide-over Shopping Cart Drawer -->
+    <div class="cart-overlay-backdrop" id="cartBackdrop" onclick="toggleCartDrawer()"></div>
+    <aside class="cart-slideover-panel" id="cartSlidePanel">
+      <div class="cart-slide-header">
+        <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Shopping Bag</h3>
+        <button class="cart-btn-close" onclick="toggleCartDrawer()">&times;</button>
+      </div>
+
+      <div class="cart-items-feed" id="cartItemsList">
+        <!-- Filled dynamically -->
+      </div>
+
+      <div class="cart-slide-footer">
+        <div class="summary-cost-line">
+          <span>Subtotal:</span>
+          <span id="bagSubtotal">₹0.00</span>
+        </div>
+        <div class="summary-cost-line">
+          <span>Textile GST (5%):</span>
+          <span id="bagGst">₹0.00</span>
+        </div>
+        <div class="summary-cost-line">
+          <span>Discount (Coupon):</span>
+          <span id="bagDiscount" class="text-emerald">-₹0.00</span>
+        </div>
+        <div class="summary-cost-line grand-total-line">
+          <span>Grand Total:</span>
+          <span id="bagGrandTotal">₹0.00</span>
+        </div>
+
+        <button class="btn-order-checkout" onclick="openCheckoutDialog()">
+          <i class="fa-solid fa-lock"></i> Checkout & Generate Tax Invoice
+        </button>
+      </div>
+    </aside>
+
+    <!-- Modal 1: Fabric Quick View Modal -->
+    <div class="modal-backdrop-wrap" id="quickViewDialog">
+      <div class="modal-box-card" style="max-width: 660px;">
+        <div class="modal-box-header">
+          <h3 id="modalFabricName">Fabric Details</h3>
+          <button class="modal-btn-dismiss" onclick="closeModalWindow('quickViewDialog')">&times;</button>
+        </div>
+        <div class="modal-box-content" id="modalFabricContent">
+          <!-- Filled by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Customer Checkout & Billing Modal -->
+    <div class="modal-backdrop-wrap" id="checkoutDialog">
+      <div class="modal-box-card" style="max-width: 560px;">
+        <div class="modal-box-header">
+          <h3><i class="fa-solid fa-receipt text-accent"></i> Invoice Billing Details</h3>
+          <button class="modal-btn-dismiss" onclick="closeModalWindow('checkoutDialog')">&times;</button>
+        </div>
+        <div class="modal-box-content">
+          <form id="orderBillingForm" onsubmit="handleInvoiceGeneration(event)">
+            <div class="form-group-field">
+              <label for="billCustomerName">Full Name / Business Name</label>
+              <input type="text" id="billCustomerName" class="form-input-control" placeholder="e.g. Ramesh Silks Erode" required>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="billCustomerEmail">Email for Tax Invoice</label>
+                <input type="email" id="billCustomerEmail" class="form-input-control" placeholder="ramesh@erode.in" required>
+              </div>
+              <div class="form-group-field">
+                <label for="billCustomerPhone">Mobile Number</label>
+                <input type="tel" id="billCustomerPhone" class="form-input-control" placeholder="+91 98420 12345" required>
+              </div>
+            </div>
+
+            <div class="form-group-field">
+              <label for="billShippingAddress">Shipping Address</label>
+              <input type="text" id="billShippingAddress" class="form-input-control" placeholder="e.g. 42 Netaji Road, Erode - 638001" required>
+            </div>
+
+            <div class="form-group-field">
+              <label for="billCouponCode">Promo / Coupon Code</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="billCouponCode" class="form-input-control" placeholder="Enter 'POONGUZHALI10'">
+                <button type="button" class="btn-secondary-hero" onclick="applyCartCoupon()" style="padding: 8px 18px; font-size: 0.88rem;">Apply</button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary-hero" style="width: 100%; margin-top: 10px; justify-content: center;">
+              <i class="fa-solid fa-file-invoice-dollar"></i> Generate Tax Invoice & Place Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Printable GST Tax Invoice Paper -->
+    <div class="modal-backdrop-wrap" id="invoicePaperDialog">
+      <div class="modal-box-card" style="max-width: 720px; background: transparent; border: none; box-shadow: none;">
+        <div style="text-align: right; margin-bottom: 12px;" class="no-print">
+          <button class="btn-secondary-hero" onclick="printTaxInvoice()" style="margin-right: 8px; padding: 8px 18px; font-size: 0.88rem;">
+            <i class="fa-solid fa-print"></i> Print Tax Invoice
+          </button>
+          <button class="btn-icon-nav" onclick="closeModalWindow('invoicePaperDialog')" style="display: inline-flex;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="invoice-sheet-paper" id="invoiceSheetPaper">
+          <!-- Filled dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: Poongodi Cotton Mills Management Portal (Modules 1, 2, 3, 5 & DB Schemas) -->
+    <div class="modal-backdrop-wrap" id="storeManagerDialog">
+      <div class="modal-box-card" style="max-width: 980px;">
+        <div class="modal-box-header">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="brand-icon" style="width: 38px; height: 38px; font-size: 1.1rem;">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin: 0;">Sree Poonguzhali Cotton Mills – Operations Portal</h3>
+              <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Smart Textile Industry & Management System • CEO: C. Prabhu</span>
+            </div>
+          </div>
+          <button class="modal-btn-dismiss" onclick="closeModalWindow('storeManagerDialog')">&times;</button>
+        </div>
+        <div class="modal-box-content">
+          
+          <!-- Multi-Module Navigation Tabs Bar -->
+          <div class="portal-tabs-bar">
+            <button class="portal-tab-pill active" id="tabBtnDashboard" onclick="switchPortalTab('tabDashboard')">
+              <i class="fa-solid fa-chart-line"></i> Dashboard & KPIs
+            </button>
+            <button class="portal-tab-pill" id="tabBtnStock" onclick="switchPortalTab('tabStock')">
+              <i class="fa-solid fa-boxes-stacked"></i> Stock Management
+            </button>
+            <button class="portal-tab-pill" id="tabBtnSuppliers" onclick="switchPortalTab('tabSuppliers')">
+              <i class="fa-solid fa-truck-ramp-box"></i> Suppliers & POs
+            </button>
+            <button class="portal-tab-pill" id="tabBtnLicenses" onclick="switchPortalTab('tabLicenses')">
+              <i class="fa-solid fa-certificate"></i> Licenses & Quality
+            </button>
+            <button class="portal-tab-pill" id="tabBtnDatabase" onclick="switchPortalTab('tabDatabase')">
+              <i class="fa-solid fa-database"></i> Database (Tables 3.1-3.7)
+            </button>
+            <button class="portal-tab-pill" id="tabBtnConsultancy" onclick="switchPortalTab('tabConsultancy')">
+              <i class="fa-solid fa-graduation-cap"></i> Academic & Team (KEC)
+            </button>
+          </div>
+
+          <!-- PANE 1: Dashboard & KPIs (Module 1: Admin Panel) -->
+          <div class="portal-pane active" id="paneDashboard">
+            
+            <div class="academic-collab-strip" style="margin-bottom: 20px;">
+              <div class="academic-info-col">
+                <h5><i class="fa-solid fa-shield-halved text-emerald"></i> Sree Poonguzhali Cotton Mills Control Hub</h5>
+                <p>
+                  Active Super Admin: <strong>C. Prabhu (CEO & MD)</strong> | Facility: <strong>Chithode, Erode - 638 102</strong><br>
+                  GST IN: <strong>33ADSFS4275Q1Z3</strong> | High-Capacity Spinning & Weaving Infrastructure
+                </p>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <span class="pill-badge green"><i class="fa-solid fa-circle-check"></i> System Online</span>
+                <span class="pill-badge gold"><i class="fa-solid fa-bolt"></i> Real-time Looms</span>
+              </div>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="inventory-stats-strip">
+              <div class="inv-metric-box">
+                <div class="inv-metric-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <div class="inv-metric-info">
+                  <h4 id="portalTotalSkus">0</h4>
+                  <p>Active Fabric SKUs</p>
+                </div>
+              </div>
+              <div class="inv-metric-box">
+                <div class="inv-metric-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);"><i class="fa-solid fa-tape"></i></div>
+                <div class="inv-metric-info">
+                  <h4 id="portalTotalMeters">0 m</h4>
+                  <p>Stock on Looms</p>
+                </div>
+              </div>
+              <div class="inv-metric-box">
+                <div class="inv-metric-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="inv-metric-info">
+                  <h4 id="portalLowStockAlerts">0</h4>
+                  <p>Low Stock (&lt;25m)</p>
+                </div>
+              </div>
+              <div class="inv-metric-box">
+                <div class="inv-metric-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div class="inv-metric-info">
+                  <h4 id="portalInventoryVal">₹0</h4>
+                  <p>Inventory Valuation</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Ribbon -->
+            <div style="display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-bottom: 20px;">
+              <button class="btn-secondary-hero" onclick="openInvoiceModal()" style="padding: 8px 16px; font-size: 0.85rem;">
+                <i class="fa-solid fa-file-invoice-dollar"></i> View & Print Tax Invoice
+              </button>
+              <button class="btn-primary-hero" onclick="openAddFabricSkuDialog()" style="padding: 8px 18px; font-size: 0.85rem;">
+                <i class="fa-solid fa-plus"></i> Register New Fabric SKU
+              </button>
+            </div>
+
+            <!-- Role Management Card -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px; margin-bottom: 16px;">
+              <h5 style="color: var(--text-accent); margin-bottom: 10px; font-size: 0.95rem;"><i class="fa-solid fa-id-badge"></i> Role Access Management</h5>
+              <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span style="font-size: 0.86rem; color: var(--text-secondary);">Active Operator:</span>
+                  <select id="portalRoleSelector" class="sort-select-box" style="padding: 6px 12px; font-size: 0.85rem;" onchange="handleRoleSwitch()">
+                    <option value="admin">C. Prabhu (CEO & Mill Admin)</option>
+                    <option value="storekeeper">S. Kumar (Store & Weave Master)</option>
+                    <option value="purchase">V. Mohan (Procurement Officer)</option>
+                    <option value="quality">P. Ramesh (Quality Inspector)</option>
+                  </select>
+                </div>
+                <span id="roleAccessBadge" class="pill-badge green"><i class="fa-solid fa-lock-open"></i> Full SuperAdmin Access</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PANE 2: Stock Management Module (Module 3) -->
+          <div class="portal-pane" id="paneStock">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--text-main);"><i class="fa-solid fa-warehouse text-accent"></i> Real-Time Mill Stock Audit</h4>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Automatic threshold tracking with low-stock alerts and instant loom yardage calibration.</p>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button class="btn-secondary-hero" onclick="exportStockAuditReport()" style="padding: 8px 16px; font-size: 0.85rem;">
+                  <i class="fa-solid fa-download"></i> Export Audit Sheet
+                </button>
+                <button class="btn-primary-hero" onclick="openAddFabricSkuDialog()" style="padding: 8px 18px; font-size: 0.85rem;">
+                  <i class="fa-solid fa-plus"></i> Register New SKU
+                </button>
+              </div>
+            </div>
+
+            <div class="responsive-table-wrap">
+              <table class="store-data-table">
+                <thead>
+                  <tr>
+                    <th>SKU Code</th>
+                    <th>Fabric Details & Weave</th>
+                    <th>Category</th>
+                    <th>Stock (Meters)</th>
+                    <th>Price/m</th>
+                    <th>Status</th>
+                    <th>Loom Adjustment</th>
+                  </tr>
+                </thead>
+                <tbody id="storeManagerTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- PANE 3: Supplier and Purchase Module (Module 2) -->
+          <div class="portal-pane" id="paneSuppliers">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--text-main);"><i class="fa-solid fa-truck-ramp-box text-accent"></i> Supplier Directory & Raw Material Purchases</h4>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Manage raw cotton ginners, sericulture farmers, dye manufacturers, and generate Purchase Orders.</p>
+              </div>
+              <button class="btn-primary-hero" onclick="openNewPoFormDialog()" style="padding: 8px 18px; font-size: 0.85rem;">
+                <i class="fa-solid fa-file-circle-plus"></i> Issue Purchase Order (PO)
+              </button>
+            </div>
+
+            <!-- Registered Suppliers Grid -->
+            <div class="supplier-summary-grid" id="suppliersListContainer">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Purchase Orders Table -->
+            <h5 style="color: var(--text-accent); margin-top: 24px; margin-bottom: 12px; font-size: 0.95rem;">
+              <i class="fa-solid fa-file-invoice"></i> Recent Raw Material Purchase Orders (PO)
+            </h5>
+            <div class="responsive-table-wrap">
+              <table class="store-data-table">
+                <thead>
+                  <tr>
+                    <th>PO Number</th>
+                    <th>Supplier Mill</th>
+                    <th>Material Description</th>
+                    <th>Quantity</th>
+                    <th>Total (₹)</th>
+                    <th>Delivery Status</th>
+                  </tr>
+                </thead>
+                <tbody id="poTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- PANE 4: About Us, Licenses & Fabric Quality (Module 5) -->
+          <div class="portal-pane" id="paneLicenses">
+            <div style="margin-bottom: 18px;">
+              <h4 style="font-size: 1.1rem; color: var(--text-main);"><i class="fa-solid fa-ribbon text-accent"></i> Sree Poonguzhali Cotton Mills Certifications & Quality Norms</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary);">Official legal licenses, compliance numbers, and laboratory testing procedures for textile manufacturing.</p>
+            </div>
+
+            <div class="license-grid-cards">
+              <div class="license-cert-card">
+                <div class="license-icon-head">
+                  <div class="license-emblem" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);"><i class="fa-solid fa-leaf"></i></div>
+                  <span class="pill-badge green">Valid 2026-27</span>
+                </div>
+                <h4>GOTS Organic Cotton Standard</h4>
+                <span class="cert-number">Lic: GOTS-IN-2024-884</span>
+                <p>100% Global Organic Textile Standard certified Shankar-6 raw cotton spinning procedures.</p>
+              </div>
+
+              <div class="license-cert-card">
+                <div class="license-icon-head">
+                  <div class="license-emblem" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);"><i class="fa-solid fa-award"></i></div>
+                  <span class="pill-badge green">ISO Certified</span>
+                </div>
+                <h4>ISO 9001:2015 Quality Management</h4>
+                <span class="cert-number">Cert: ISO-QMS-4412/ERD</span>
+                <p>Audited quality systems for fiber spinning, powerloom weaving, and laboratory testing.</p>
+              </div>
+
+              <div class="license-cert-card">
+                <div class="license-icon-head">
+                  <div class="license-emblem" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fa-solid fa-landmark"></i></div>
+                  <span class="pill-badge gold">Govt. of India</span>
+                </div>
+                <h4>Ministry of Textiles Registration</h4>
+                <span class="cert-number">Reg: TN/ERD/TXM-4921/2004</span>
+                <p>Registered textile mill under the Textile Commissioner, Chithode / Erode Zone.</p>
+              </div>
+
+              <div class="license-cert-card">
+                <div class="license-icon-head">
+                  <div class="license-emblem" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"><i class="fa-solid fa-water"></i></div>
+                  <span class="pill-badge green">Zero Discharge</span>
+                </div>
+                <h4>TNPCB Zero Liquid Discharge</h4>
+                <span class="cert-number">Consent: TNPCB/ZLD-2023-77</span>
+                <p>100% recycled process water protecting local water tables and Bhavani river basin.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANE 5: Database Schemas & Records (Tables 3.1 - 3.7) -->
+          <div class="portal-pane" id="paneDatabase">
+            <div style="margin-bottom: 18px;">
+              <h4 style="font-size: 1.1rem; color: var(--text-main);"><i class="fa-solid fa-database text-accent"></i> Project Database Design (Chapter 3: Tables 3.1 – 3.7)</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary);">Direct schema specifications and live data instances conforming to the academic project report.</p>
+            </div>
+
+            <!-- Table 3.1 & 3.2 -->
+            <div class="schema-block-card">
+              <div class="schema-header">
+                <h5><i class="fa-solid fa-table"></i> Table 3.1: Admin Details & Table 3.2: Customer Details</h5>
+                <span>MySQL Relational Entities</span>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="store-data-table" style="font-size: 0.82rem;">
+                  <thead>
+                    <tr><th>Table Name</th><th>Field Name</th><th>Data Type</th><th>Size</th><th>Constraints</th><th>Sample Current Record</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Admin Details</td><td>Admin_id</td><td>Integer</td><td>4</td><td>Primary Key</td><td>101 (CEO C. Prabhu)</td></tr>
+                    <tr><td>Admin Details</td><td>Password</td><td>Varchar</td><td>10</td><td>Not Null</td><td>•••••••• (Encrypted SHA-256)</td></tr>
+                    <tr><td>Customer Details</td><td>Customer_id</td><td>Integer</td><td>4</td><td>Primary Key</td><td>204</td></tr>
+                    <tr><td>Customer Details</td><td>Customer_Name</td><td>Varchar</td><td>10</td><td>Not Null</td><td>Ananya Studios</td></tr>
+                    <tr><td>Customer Details</td><td>Customer_Email</td><td>Varchar</td><td>30</td><td>Not Null</td><td>ananya@erode.in</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Table 3.3 & 3.4 -->
+            <div class="schema-block-card">
+              <div class="schema-header">
+                <h5><i class="fa-solid fa-table"></i> Table 3.3: Product Details & Table 3.4: Category Details</h5>
+                <span>Catalog & Weave Master</span>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="store-data-table" style="font-size: 0.82rem;">
+                  <thead>
+                    <tr><th>Field Name</th><th>Type</th><th>Size</th><th>Constraints</th><th>Live Mapping</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Product_id</td><td>Integer</td><td>4</td><td>Primary Key</td><td>Product SKU Code (1 to 8)</td></tr>
+                    <tr><td>Product_Name</td><td>Varchar</td><td>10</td><td>Not Null</td><td>Poonguzhali Combed Cotton / Mulberry Silk</td></tr>
+                    <tr><td>Product_Price</td><td>Double</td><td>8</td><td>Not Null</td><td>₹380.00 / ₹1,850.00 per meter</td></tr>
+                    <tr><td>Category_Id</td><td>Varchar</td><td>15</td><td>Foreign Key</td><td>Cotton, Silk, Linen, Brocade, Denim</td></tr>
+                    <tr><td>Product_Brand</td><td>Varchar</td><td>15</td><td>Not Null</td><td>Sree Poonguzhali Cotton Mills</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Table 3.5 & 3.6 -->
+            <div class="schema-block-card">
+              <div class="schema-header">
+                <h5><i class="fa-solid fa-table"></i> Table 3.5: Product Purchase Details & Table 3.6: Payment Details</h5>
+                <span>GST Invoicing & Billing Transactions</span>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="store-data-table" style="font-size: 0.82rem;">
+                  <thead>
+                    <tr><th>Table</th><th>Field Name</th><th>Type</th><th>Constraints</th><th>Invoice Engine Field</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Purchase Details</td><td>Purchase_id</td><td>Integer</td><td>Primary Key</td><td>INV-PCM-2026-9042</td></tr>
+                    <tr><td>Purchase Details</td><td>Shipping_Address</td><td>Varchar(20)</td><td>Not Null</td><td>42 Netaji Road, Erode</td></tr>
+                    <tr><td>Payment Details</td><td>Payment_id</td><td>Integer</td><td>Primary Key</td><td>PAY-99201</td></tr>
+                    <tr><td>Payment Details</td><td>Receipt_Number</td><td>Varchar(50)</td><td>Unique</td><td>PCM-REC-8841</td></tr>
+                    <tr><td>Payment Details</td><td>Amount</td><td>Decimal(8)</td><td>Not Null</td><td>Auto-calculated with 5% GST</td></tr>
+                  </tbody>
+            <!-- Table 3.7: Stock Monitoring Details -->
+            <div class="schema-block-card">
+              <div class="schema-header">
+                <h5><i class="fa-solid fa-table"></i> Table 3.7: Stock Monitoring Details</h5>
+                <span>Real-Time Inventory & Low-Stock Alerts</span>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="store-data-table" style="font-size: 0.82rem;">
+                  <thead>
+                    <tr><th>Field Name</th><th>Data Type</th><th>Size</th><th>Constraints</th><th>Live Mill Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Stock_id</td><td>Integer</td><td>5</td><td>Primary Key</td><td>1001 to 1008</td></tr>
+                    <tr><td>Product_id</td><td>Integer</td><td>5</td><td>Foreign Key</td><td>References Table 3.3</td></tr>
+                    <tr><td>Stock_Meters</td><td>Integer</td><td>6</td><td>Not Null</td><td>Live Roll Balance (m)</td></tr>
+                    <tr><td>Low_Stock_Threshold</td><td>Integer</td><td>4</td><td>Default 25</td><td>Trigger Alert if &le; 25m</td></tr>
+                    <tr><td>Warehouse_Bay</td><td>Varchar</td><td>20</td><td>Not Null</td><td>Gangapuram Central Mill Bay 1-4</td></tr>
+                    <tr><td>Weave_Status</td><td>Varchar</td><td>30</td><td>Not Null</td><td>Active Loom Processing / In Stock</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Presentation Slide Schemas: Slides 18 - 25 -->
+            <div class="schema-block-card">
+              <div class="schema-header">
+                <h5><i class="fa-solid fa-diagram-project"></i> Project Review Presentation Specifications (Team 18 Slides 18 – 25)</h5>
+                <span>System Features & Module Entity Relational Models</span>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="store-data-table" style="font-size: 0.82rem;">
+                  <thead>
+                    <tr><th>Slide Module Table</th><th>Primary Key</th><th>Attributes / Constraints</th><th>System Implementation</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>System Features Details</strong><br><small>(Slide 19)</small></td>
+                      <td><code>feature_id</code> (Int 5, PK)</td>
+                      <td><code>system_type</code>, <code>automation_tasks</code>, <code>real_time_access</code>, <code>user_interface</code>, <code>security_access</code></td>
+                      <td><span class="pill-badge green">Implemented</span> Active in Operations Portal</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Modules Used Details</strong><br><small>(Slide 20)</small></td>
+                      <td><code>module_id</code> (Int 5, PK)</td>
+                      <td><code>admin_panel_module</code>, <code>supplier_purchase_module</code>, <code>stock_management_module</code>, <code>product_display_module</code>, <code>about_us_module</code></td>
+                      <td><span class="pill-badge green">Implemented</span> 5 Active Portal Modules</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Admin Panel Module Details</strong><br><small>(Slide 21)</small></td>
+                      <td><code>admin_id</code> (Int 5, PK)</td>
+                      <td><code>admin_login</code>, <code>user_role_management</code>, <code>product_management</code>, <code>dashboard_reports</code></td>
+                      <td><span class="pill-badge green">Implemented</span> Role Switcher & Live KPI Stats</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Supplier & Purchase Details</strong><br><small>(Slide 22)</small></td>
+                      <td><code>supplier_id</code> (Int 5, PK)</td>
+                      <td><code>supplier_registration</code>, <code>purchase_order</code>, <code>purchase_history</code>, <code>invoice_payment</code></td>
+                      <td><span class="pill-badge green">Implemented</span> Supplier Directory & PO Engine</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Stock Management Details</strong><br><small>(Slide 23)</small></td>
+                      <td><code>stock_id</code> (Int 5, PK)</td>
+                      <td><code>stock_entry</code>, <code>stock_monitoring</code>, <code>low_stock_alert</code>, <code>stock_reports</code></td>
+                      <td><span class="pill-badge green">Implemented</span> &plusmn;10m Adjustments & CSV Export</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Product Display Details</strong><br><small>(Slide 24)</small></td>
+                      <td><code>product_id</code> (Int 5, PK)</td>
+                      <td><code>product_listing</code>, <code>product_details</code>, <code>search_filter</code>, <code>availability_status</code></td>
+                      <td><span class="pill-badge green">Implemented</span> Live Storefront & Quick View</td>
+                    </tr>
+                    <tr>
+                      <td><strong>About Us (License & Quality)</strong><br><small>(Slide 25)</small></td>
+                      <td><code>about_id</code> (Int 5, PK)</td>
+                      <td><code>company_profile</code>, <code>license_details</code>, <code>fabric_quality</code>, <code>compliance_policy</code></td>
+                      <td><span class="pill-badge green">Implemented</span> GOTS/ISO Licenses & Norms</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PANE 6: Academic Project Credentials & Consultancy Offer Letter -->
+          <div class="portal-pane" id="paneConsultancy">
+            <div class="academic-collab-strip" style="margin-bottom: 20px;">
+              <div class="academic-info-col">
+                <h5><i class="fa-solid fa-graduation-cap text-accent"></i> Kongu Engineering College (Autonomous), Perundurai</h5>
+                <p>
+                  Department of Computer Technology - PG | <strong>Master of Science in Software Systems</strong><br>
+                  Faculty Supervisor: <strong>Dr. T. Maragatham</strong> (Associate Professor, CT-PG) | Project: <strong>Team 18</strong>
+                </p>
+              </div>
+              <div>
+                <span class="pill-badge green"><i class="fa-solid fa-circle-check"></i> Project Valid: Dec 2025 – Mar 2026</span>
+              </div>
+            </div>
+
+            <!-- The Official Consultancy Confirmation Letter cleanly displayed for Academic Evaluation -->
+            <div class="consultancy-letter-card" style="background: #ffffff; color: #1e293b; border: 2px solid #cbd5e1; border-radius: var(--radius-md); padding: 24px 22px; margin: 0 0 20px 0; box-shadow: var(--shadow-sm); font-family: 'Plus Jakarta Sans', sans-serif;">
+              <div style="border-bottom: 2px solid #16a34a; padding-bottom: 12px; margin-bottom: 16px; text-align: center;">
+                <h3 style="color: #15803d; font-size: 1.35rem; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 4px;">SREE POONGUZHALI COTTON MILLS</h3>
+                <p style="font-size: 0.78rem; color: #475569; margin: 0; line-height: 1.4;">
+                  Sf No. 41/ 1A, Gangapuram to sadaiyampalayam road, Gangapuram, Chithode, Erode - 638 102<br>
+                  <strong>GST IN : 33ADSFS4275Q1Z3</strong> | Phone no : <strong>9965877007</strong>
+                </p>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 14px;">
+                <span>Sub: Confirmation - Consultancy Work - Regarding</span>
+                <span>DATE: 06-12-2025</span>
+              </div>
+
+              <div style="font-size: 0.84rem; line-height: 1.7; color: #334155; margin-bottom: 16px;">
+                <strong>To:</strong> The Head of Department, Department of Computer Technology - PG, Kongu Engineering College, Perundurai - 638060.<br>
+                <strong>Dear Sir/Madam,</strong><br>
+                With reference to the discussions we had with <strong>Dr. Maragatham T.</strong>, Associate Professor, Computer Technology PG, we are pleased to offer the consultancy work for software development to your college. We acknowledge that the work will be executed by:
+                <ul style="margin: 8px 0 8px 24px; font-weight: 700; color: #0f172a; line-height: 1.8;">
+                  <li>Pranitha S G. (Reg No: 23ISR044)</li>
+                  <li>Shalini S R. (Reg No: 23ISR053)</li>
+                  <li>Varshasri K. (Reg No: 23ISR060)</li>
+                </ul>
+                from III year M.Sc. Software Systems. This arrangement is effective from December 2025 and will remain valid until March 2026.
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 18px; padding-top: 14px; border-top: 1px dashed #cbd5e1;">
+                <div style="font-size: 0.74rem; color: #64748b;">
+                  <span class="pill-badge green" style="font-size: 0.72rem;"><i class="fa-solid fa-stamp"></i> Official Consultancy Letter</span>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.82rem; font-weight: 800; color: #1e3a8a;">Sree Poonguzhali Cotton Mills</div>
+                  <div style="font-size: 0.7rem; color: #64748b;">S.F. No: 41/1A, Gangapuram, Chithode, Erode - 638 102</div>
+                  <div style="font-family: 'Playfair Display', cursive, serif; font-size: 1.3rem; font-weight: 700; color: #1e40af; margin-top: 3px;">C. Prabhu</div>
+                  <div style="font-size: 0.74rem; font-weight: 700; color: #334155;">Managing Director / CEO</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Architecture Team Grid -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+              <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; text-align: center;">
+                <i class="fa-solid fa-user-graduate text-accent" style="font-size: 1.5rem; margin-bottom: 6px;"></i>
+                <div style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary);">Pranitha S G</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">23ISR044 • M.Sc. SS</div>
+              </div>
+              <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; text-align: center;">
+                <i class="fa-solid fa-user-graduate text-accent" style="font-size: 1.5rem; margin-bottom: 6px;"></i>
+                <div style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary);">Shalini S R</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">23ISR053 • M.Sc. SS</div>
+              </div>
+              <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; text-align: center;">
+                <i class="fa-solid fa-user-graduate text-accent" style="font-size: 1.5rem; margin-bottom: 6px;"></i>
+                <div style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary);">Varshasri K</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">23ISR060 • M.Sc. SS</div>
+              </div>
+            </div>
+
+            <!-- United Nations Sustainable Development Goals (SDG) Alignment (Report Page 51) -->
+            <div style="margin-top: 22px; background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+                <h5 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);"><i class="fa-solid fa-earth-americas text-emerald"></i> UN Sustainable Development Goals (SDG) Mapping <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: normal;">(Final Report Page 51)</span></h5>
+                <span class="pill-badge green" style="font-size: 0.7rem;"><i class="fa-solid fa-check-double"></i> 3 Core SDGs Aligned</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-sm); padding: 12px;">
+                  <div style="font-weight: 800; font-size: 0.84rem; color: var(--emerald-dark); margin-bottom: 4px;"><i class="fa-solid fa-chart-line"></i> SDG 8: Decent Work & Economic Growth</div>
+                  <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">Automated inventory tracking, reduced manual errors, enhanced workforce productivity, and sustainable operational growth in the textile sector.</p>
+                </div>
+                <div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-sm); padding: 12px;">
+                  <div style="font-weight: 800; font-size: 0.84rem; color: #1d4ed8; margin-bottom: 4px;"><i class="fa-solid fa-industry"></i> SDG 9: Industry, Innovation & Infrastructure</div>
+                  <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">Centralized digital management platform, modern web architecture, and automated scalable infrastructure modernizing traditional mill processes.</p>
+                </div>
+                <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-sm); padding: 12px;">
+                  <div style="font-weight: 800; font-size: 0.84rem; color: #b45309; margin-bottom: 4px;"><i class="fa-solid fa-scale-balanced"></i> SDG 16: Peace, Justice & Strong Institutions</div>
+                  <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">Transparent audit records, automated GST invoicing, role-based security access, and accountable governance across operations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5: Register New Fabric SKU Modal -->
+    <div class="modal-backdrop-wrap" id="newFabricSkuDialog">
+      <div class="modal-box-card" style="max-width: 580px;">
+        <div class="modal-box-header">
+          <h3><i class="fa-solid fa-plus-circle text-accent"></i> Register New Fabric SKU</h3>
+          <button class="modal-btn-dismiss" onclick="closeModalWindow('newFabricSkuDialog')">&times;</button>
+        </div>
+        <div class="modal-box-content">
+          <form id="newFabricForm" onsubmit="handleAddNewFabricSku(event)">
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="newFabName">Fabric Name</label>
+                <input type="text" id="newFabName" class="form-input-control" placeholder="e.g. Handloom Tussar Silk" required>
+              </div>
+              <div class="form-group-field">
+                <label for="newFabCategory">Category</label>
+                <select id="newFabCategory" class="form-select-control" required>
+                  <option value="Silk">Pure Silk</option>
+                  <option value="Cotton">Organic Cotton</option>
+                  <option value="Linen">Flax Linen</option>
+                  <option value="Brocade">Banarasi Brocade</option>
+                  <option value="Denim">Denim & Twill</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="newFabBrand">Mill / Weaver Origin</label>
+                <input type="text" id="newFabBrand" class="form-input-control" placeholder="e.g. Erode Handlooms" required>
+              </div>
+              <div class="form-group-field">
+                <label for="newFabGsm">Fabric Weight / GSM</label>
+                <input type="text" id="newFabGsm" class="form-input-control" placeholder="e.g. 140 GSM" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="newFabPrice">Price per Meter (₹)</label>
+                <input type="number" id="newFabPrice" class="form-input-control" min="50" step="5" placeholder="e.g. 650" required>
+              </div>
+              <div class="form-group-field">
+                <label for="newFabStock">Meters Available</label>
+                <input type="number" id="newFabStock" class="form-input-control" min="1" step="1" placeholder="e.g. 150" required>
+              </div>
+            </div>
+
+            <div class="form-group-field">
+              <label for="newFabDesc">Fabric Description</label>
+              <textarea id="newFabDesc" class="form-textarea-control" rows="2" placeholder="Describe weave texture, softness, and recommended garment use..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-hero" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-save"></i> Save SKU to Live Catalog
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6: Issue Raw Material Purchase Order (PO) Modal -->
+    <div class="modal-backdrop-wrap" id="newPoDialog">
+      <div class="modal-box-card" style="max-width: 580px;">
+        <div class="modal-box-header">
+          <h3><i class="fa-solid fa-file-circle-plus text-accent"></i> Issue Raw Material Purchase Order</h3>
+          <button class="modal-btn-dismiss" onclick="closeModalWindow('newPoDialog')">&times;</button>
+        </div>
+        <div class="modal-box-content">
+          <form id="newPoForm" onsubmit="handleCreatePurchaseOrder(event)">
+            <div class="form-group-field">
+              <label for="poSupplierSelect">Select Registered Supplier Mill</label>
+              <select id="poSupplierSelect" class="form-select-control" required>
+                <!-- Populated by app.js -->
+              </select>
+            </div>
+
+            <div class="form-group-field">
+              <label for="poMaterialDesc">Material / Raw Yarn Specification</label>
+              <input type="text" id="poMaterialDesc" class="form-input-control" placeholder="e.g. 100% GOTS Combed Cotton Raw Yarn (Ne 40s)" required>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label for="poQuantity">Quantity (Bales / Kg / Cones)</label>
+                <input type="number" id="poQuantity" class="form-input-control" min="10" step="5" value="250" required>
+              </div>
+              <div class="form-group-field">
+                <label for="poUnitPrice">Unit Price (₹)</label>
+                <input type="number" id="poUnitPrice" class="form-input-control" min="10" step="1" value="280" required>
+              </div>
+            </div>
+
+            <div class="form-group-field">
+              <label for="poDeliveryDate">Required Loom Delivery Date</label>
+              <input type="date" id="poDeliveryDate" class="form-input-control" required>
+            </div>
+
+            <button type="submit" class="btn-primary-hero" style="width: 100%; justify-content: center; margin-top: 8px;">
+              <i class="fa-solid fa-paper-plane"></i> Authorize & Dispatch Purchase Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Anchor -->
+    <div id="toastAnchor"></div>
+
+    <!-- Complete Luxury E-Commerce Footer -->
+    <footer class="site-footer-main">
+      <div class="container">
+        
+        <div class="footer-top-grid">
+          
+          <div class="footer-col-block">
+            <a href="#heroSection" class="brand-link" style="margin-bottom: 16px;">
+              <div class="brand-icon">
+                <i class="fa-solid fa-industry"></i>
+              </div>
+              <div class="brand-title-wrap">
+                <h2>SREE POONGUZHALI COTTON MILLS</h2>
+                <span>Smart Textile Industry • Chithode, Erode</span>
+              </div>
+            </a>
+            <p>
+              Sree Poonguzhali Cotton Mills. Premier textile spinning and powerloom weaving enterprise specializing in Shankar-6 combed cottons, pure mulberry silks, natural linens, and commercial fabrics. Modern operations powered by the Smart Textile Management System in collaboration with Kongu Engineering College.
+            </p>
+            <div class="footer-social-row">
+              <a href="#" class="social-icon-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-icon-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col-block">
+            <h4>Fabric Collections</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#catalogSection" onclick="setCategoryFilter('Cotton')">Poonguzhali Combed Cottons</a></li>
+              <li><a href="#catalogSection" onclick="setCategoryFilter('Silk')">Mulberry Kanchipuram Silks</a></li>
+              <li><a href="#catalogSection" onclick="setCategoryFilter('Linen')">Natural Flax Linens</a></li>
+              <li><a href="#catalogSection" onclick="setCategoryFilter('Brocade')">Royal Banarasi Brocades</a></li>
+              <li><a href="#catalogSection" onclick="setCategoryFilter('Denim')">Heavy Indigo Denim Twill</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-block">
+            <h4>Mill Compliance & System</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#aboutSection">Statutory Mill Licenses (GOTS / ISO)</a></li>
+              <li><a href="#aboutSection">4-Point ASTM Quality Standards</a></li>
+              <li><a href="#millStorySection">Official Consultancy Confirmation</a></li>
+              <li><a href="#b2bSection">B2B Wholesale Inquiries</a></li>
+              <li><a href="#" onclick="openStoreManagerModal()">Mill Operations Portal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-block">
+            <h4>Mill Registered Facility</h4>
+            <p style="margin-bottom: 8px;">
+              <strong>Sree Poonguzhali Cotton Mills:</strong><br>
+              Sf No.41/ 1A, Gangapuram to sadaiyampalayam road,<br>
+              Gangapuram, Chithode, Erode - 638 102<br>
+              <strong>GST IN:</strong> 33ADSFS4275Q1Z3<br>
+              <strong>CEO / MD:</strong> C. Prabhu
+            </p>
+            <p style="font-size: 0.84rem; color: var(--text-accent);">
+              <i class="fa-solid fa-phone"></i> Phone: 9965877007<br>
+              <i class="fa-solid fa-envelope"></i> contact@sreepoonguzhali.com
+            </p>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            &copy; 2026 Sree Poonguzhali Cotton Mills. All rights reserved. GST IN: 33ADSFS4275Q1Z3. Enterprise Textile ERP & Management System.
+          </div>
+          <div style="display: flex; gap: 16px;">
+            <span><i class="fa-solid fa-shield-halved text-emerald"></i> 256-Bit SSL Secured</span>
+            <span><i class="fa-solid fa-receipt text-accent"></i> Automated GST Invoicing</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Application Logic Scripts -->
+  <script src="app.js?v=2.3"></script>
+</body>
+</html>
